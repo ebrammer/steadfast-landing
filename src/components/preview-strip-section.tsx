@@ -14,9 +14,9 @@ const previews = [
     label: "Daily routines",
   },
   {
-    src: "/images/gridBottom.png",
-    alt: "Daily overview grid in Steadfast",
-    label: "Quiet overview",
+    src: "/images/screenMockupCutoff.png",
+    alt: "Steadfast screen preview",
+    label: "Guided practice",
   },
 ];
 

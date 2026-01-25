@@ -2,6 +2,7 @@ import CallToActionSection from "@/components/call-to-action-section";
 import FooterSection from "@/components/footer-section";
 import FeaturesSection from "@/components/features-section";
 import HeroSection from "@/components/hero-section";
+import OverviewBackgroundSection from "@/components/overview-background-section";
 import PracticeSection from "@/components/practice-section";
 import PreviewStripSection from "@/components/preview-strip-section";
 import ScriptureSection from "@/components/scripture-section";
@@ -17,6 +18,7 @@ export default function Home() {
       <main className="flex flex-col">
         <HeroSection />
         <PreviewStripSection />
+        <OverviewBackgroundSection />
         <WhatSteadfastIsSection />
         <FeaturesSection />
         <ScriptureSection />
