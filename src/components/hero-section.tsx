@@ -38,7 +38,7 @@ export default function HeroSection() {
           <Card className="bg-card/80">
             <CardContent className="p-4 sm:p-6">
               <Image
-                src="https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/steadfast-landing-27jvc2/assets/t29ygc5oiymr/devices.png"
+                src="/images/devices.png"
                 alt="Steadfast app preview on devices"
                 width={900}
                 height={720}

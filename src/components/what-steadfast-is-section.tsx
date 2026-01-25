@@ -28,7 +28,7 @@ export default function WhatSteadfastIsSection() {
           <Card className="bg-card/80">
             <CardContent className="p-4 sm:p-6">
               <Image
-                src="https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/steadfast-landing-27jvc2/assets/lbsrtdpft7dt/focusModeNew.png"
+                src="/images/focusModeNew.png"
                 alt="Focused Scripture reading screen in Steadfast"
                 width={820}
                 height={640}

@@ -8,7 +8,7 @@ const navLinks = [
 
 export default function Topbar() {
   return (
-    <header className="w-full border-b border-border/80 bg-background">
+    <header className="sticky top-0 z-50 w-full border-b border-border/80 bg-background/95 backdrop-blur">
       <div className="mx-auto flex w-full max-w-5xl items-center justify-between px-6 py-4 sm:px-8">
         <a
           href="#top"
