@@ -12,11 +12,11 @@ export default function TheologicalOrientationSection() {
           </CardHeader>
           <CardContent className="space-y-4 text-base leading-relaxed text-muted-foreground">
             <p>
-              Steadfast is shaped by historic Protestant spirituality,
+              Steadfast is shaped by historic Protestant spirituality:
               Scripture-centered, ordinary, and durable.
             </p>
             <p>
-              It is not a replacement for the local church, but a tool meant to
+              It is not a replacement for the local church; it is a tool to
               support daily faithfulness within it.
             </p>
           </CardContent>

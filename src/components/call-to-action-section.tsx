@@ -11,8 +11,8 @@ export default function CallToActionSection() {
               Faithfulness is cultivated over time.
             </CardTitle>
             <p className="text-base leading-relaxed text-muted-foreground">
-              Steadfast is currently in development. Join the waitlist to follow
-              along as we build.
+              Steadfast is in development. Join the waitlist to follow along as
+              we build.
             </p>
           </CardHeader>
           <CardFooter>

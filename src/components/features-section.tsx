@@ -11,7 +11,7 @@ const features = [
     title: "Scripture",
     tagline: "Read the Bible with focus.",
     description:
-      "Follow structured reading plans or read freely, without ads, feeds, or interruptions.",
+      "Follow structured reading plans or read freely, without feeds or interruptions.",
   },
   {
     title: "Prayer",
@@ -22,14 +22,13 @@ const features = [
   {
     title: "Journaling",
     tagline: "Write with intention.",
-    description:
-      "Keep reflections, observations, and records of God's faithfulness in your own words.",
+    description: "Keep reflections and records of God's faithfulness in your own words.",
   },
   {
     title: "Offline-first",
     tagline: "Available wherever you are.",
     description:
-      "Steadfast is designed to work without constant connectivity, respecting both your attention and your time.",
+      "Designed to work without constant connectivity, respecting attention and time.",
   },
 ];
 

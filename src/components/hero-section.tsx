@@ -14,8 +14,7 @@ export default function HeroSection() {
             </h1>
             <p className="max-w-2xl text-lg leading-relaxed text-muted-foreground sm:text-xl">
               Steadfast helps Christians read Scripture, pray faithfully, and
-              keep a thoughtful record of God&apos;s work, day by day, without
-              distraction.
+              keep a record of God&apos;s work day by day, without distraction.
             </p>
           </div>
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center">

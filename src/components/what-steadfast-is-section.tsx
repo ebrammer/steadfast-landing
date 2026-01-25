@@ -12,13 +12,13 @@ export default function WhatSteadfastIsSection() {
           </CardHeader>
           <CardContent className="space-y-4 text-base leading-relaxed text-muted-foreground">
             <p>
-              Steadfast is a devotional companion designed to support ordinary,
-              enduring Christian practice.
+              Steadfast is a devotional companion for ordinary, enduring
+              Christian practice.
             </p>
             <p>
-              It brings together Scripture reading, prayer, and journaling into
-              a single, quiet space, helping believers remain attentive to
-              God&apos;s Word and the means of grace, even in a distracted age.
+              It brings Scripture reading, prayer, and journaling into a single
+              quiet space so believers remain attentive to God&apos;s Word and the
+              means of grace in a distracted age.
             </p>
           </CardContent>
         </Card>
