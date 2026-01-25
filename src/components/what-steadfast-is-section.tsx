@@ -1,19 +1,19 @@
 import Image from "next/image";
 
+import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function WhatSteadfastIsSection() {
   return (
     <section id="learn-more" className="py-20 sm:py-28">
       <div className="mx-auto w-full max-w-5xl px-6 sm:px-8">
-        <div className="grid gap-8 lg:grid-cols-[1.1fr,0.9fr]">
-          <Card className="bg-card/80">
-            <CardHeader className="space-y-4">
-              <CardTitle className="text-2xl sm:text-3xl">
-                Built for faithfulness, not noise.
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-5 text-base leading-7 text-muted-foreground">
+        <div className="grid gap-10 lg:grid-cols-[1.1fr,0.9fr] lg:items-center">
+          <div className="space-y-6">
+            <Badge className="w-fit">Quiet companion</Badge>
+            <h2 className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
+              Built for faithfulness, not noise.
+            </h2>
+            <div className="space-y-4 text-base leading-7 text-muted-foreground">
               <p>
                 Steadfast is a devotional companion for ordinary, enduring
                 Christian practice.
@@ -23,16 +23,16 @@ export default function WhatSteadfastIsSection() {
                 single quiet space so believers remain attentive to God&apos;s Word
                 and the means of grace in a distracted age.
               </p>
-            </CardContent>
-          </Card>
-          <Card className="bg-card/80">
+            </div>
+          </div>
+          <Card className="bg-card shadow-lg">
             <CardContent className="p-4 sm:p-6">
               <Image
-                src="/images/focusModeNew.png"
-                alt="Focused Scripture reading screen in Steadfast"
+                src="/images/screenMockupCutoff.png"
+                alt="Steadfast reading and prayer interface"
                 width={820}
-                height={640}
-                className="h-auto w-full rounded-md object-contain grayscale"
+                height={860}
+                className="h-auto w-full rounded-2xl object-contain"
                 sizes="(min-width: 1024px) 36vw, 100vw"
               />
             </CardContent>

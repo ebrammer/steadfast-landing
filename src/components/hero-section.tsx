@@ -1,5 +1,6 @@
 import Image from "next/image";
 
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -10,9 +11,9 @@ export default function HeroSection() {
         <div className="grid items-center gap-12 lg:grid-cols-[1.1fr,0.9fr]">
           <div className="flex flex-col gap-10">
             <div className="space-y-6">
-              <p className="text-sm font-semibold uppercase tracking-[0.3em] text-muted-foreground">
-                Steadfast
-              </p>
+              <Badge variant="accent" className="w-fit">
+                Embrace steady faithfulness
+              </Badge>
               <h1 className="text-4xl font-semibold leading-tight tracking-tight text-foreground sm:text-5xl">
                 A steady rule of life, rooted in Scripture.
               </h1>
@@ -22,27 +23,31 @@ export default function HeroSection() {
               </p>
             </div>
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
-              <Button asChild size="lg" className="w-full sm:w-auto">
+              <Button
+                asChild
+                size="lg"
+                className="w-full rounded-full px-6 sm:w-auto"
+              >
                 <a href="#waitlist">Join the waitlist</a>
               </Button>
               <Button
                 asChild
                 variant="outline"
                 size="lg"
-                className="w-full sm:w-auto"
+                className="w-full rounded-full px-6 sm:w-auto"
               >
                 <a href="#learn-more">Learn more</a>
               </Button>
             </div>
           </div>
-          <Card className="bg-card/80">
+          <Card className="bg-card shadow-lg">
             <CardContent className="p-4 sm:p-6">
               <Image
                 src="/images/devices.png"
                 alt="Steadfast app preview on devices"
                 width={900}
                 height={720}
-                className="h-auto w-full rounded-md object-contain grayscale"
+                className="h-auto w-full rounded-2xl object-contain"
                 sizes="(min-width: 1024px) 40vw, 100vw"
                 priority
               />

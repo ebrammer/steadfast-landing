@@ -1,11 +1,13 @@
+import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 
 export default function ScriptureSection() {
   return (
-    <section className="py-20 sm:py-28">
+    <section id="scripture" className="py-20 sm:py-28">
       <div className="mx-auto w-full max-w-5xl px-6 sm:px-8">
-        <Card className="bg-card/80">
-          <CardContent className="space-y-4 py-8 text-base leading-relaxed text-muted-foreground">
+        <Card className="bg-secondary/70 shadow-md">
+          <CardContent className="space-y-5 py-8 text-base leading-relaxed text-muted-foreground">
+            <Badge className="w-fit">Scripture</Badge>
             <blockquote className="space-y-4">
               <p>
                 But as for you, continue in what you have learned and have firmly

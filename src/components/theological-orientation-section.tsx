@@ -1,11 +1,13 @@
+import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function TheologicalOrientationSection() {
   return (
     <section id="theology" className="py-20 sm:py-28">
       <div className="mx-auto w-full max-w-5xl px-6 sm:px-8">
-        <Card className="bg-card/80">
+        <Card className="bg-card shadow-md">
           <CardHeader className="space-y-4">
+            <Badge className="w-fit">Theology</Badge>
             <CardTitle className="text-2xl sm:text-3xl">
               Grounded in historic Christian practice.
             </CardTitle>
