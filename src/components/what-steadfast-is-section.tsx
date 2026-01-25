@@ -2,15 +2,15 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function WhatSteadfastIsSection() {
   return (
-    <section id="learn-more" className="py-16 sm:py-24">
+    <section id="learn-more" className="py-20 sm:py-28">
       <div className="mx-auto w-full max-w-5xl px-6 sm:px-8">
         <Card className="bg-card/80">
-          <CardHeader>
+          <CardHeader className="space-y-4">
             <CardTitle className="text-2xl sm:text-3xl">
               Built for faithfulness, not noise.
             </CardTitle>
           </CardHeader>
-          <CardContent className="space-y-4 text-base leading-relaxed text-muted-foreground">
+          <CardContent className="space-y-5 text-base leading-7 text-muted-foreground">
             <p>
               Steadfast is a devotional companion for ordinary, enduring
               Christian practice.

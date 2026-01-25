@@ -3,11 +3,11 @@ import { Button } from "@/components/ui/button";
 
 export default function CallToActionSection() {
   return (
-    <section id="waitlist" className="py-20 sm:py-28">
+    <section id="waitlist" className="py-24 sm:py-32">
       <div className="mx-auto w-full max-w-5xl px-6 sm:px-8">
         <Card className="bg-secondary/60">
-          <CardHeader className="space-y-3">
-            <CardTitle className="text-2xl sm:text-3xl">
+          <CardHeader className="space-y-4">
+            <CardTitle className="text-3xl sm:text-4xl">
               Faithfulness is cultivated over time.
             </CardTitle>
             <p className="text-base leading-relaxed text-muted-foreground">
@@ -15,7 +15,7 @@ export default function CallToActionSection() {
               we build.
             </p>
           </CardHeader>
-          <CardFooter>
+          <CardFooter className="pt-2">
             <Button size="lg" className="w-full sm:w-auto">
               Join the waitlist
             </Button>

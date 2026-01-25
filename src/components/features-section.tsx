@@ -34,22 +34,22 @@ const features = [
 
 export default function FeaturesSection() {
   return (
-    <section className="py-16 sm:py-24">
+    <section className="py-20 sm:py-28">
       <div className="mx-auto w-full max-w-5xl px-6 sm:px-8">
-        <div className="space-y-8">
-          <div className="space-y-3">
+        <div className="space-y-10">
+          <div className="space-y-4">
             <p className="text-sm font-medium uppercase tracking-[0.2em] text-muted-foreground">
               Features
             </p>
-            <h2 className="text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
+            <h2 className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
               Practices held together.
             </h2>
           </div>
-          <div className="grid gap-6 sm:grid-cols-2">
+          <div className="grid gap-8 sm:grid-cols-2">
             {features.map((feature) => (
               <Card key={feature.title} className="bg-card/80">
-                <CardHeader className="space-y-2">
-                  <CardTitle className="text-lg">{feature.title}</CardTitle>
+                <CardHeader className="space-y-3">
+                  <CardTitle className="text-xl">{feature.title}</CardTitle>
                   <CardDescription className="text-base font-medium text-foreground">
                     {feature.tagline}
                   </CardDescription>
