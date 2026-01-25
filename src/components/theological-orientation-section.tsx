@@ -2,7 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function TheologicalOrientationSection() {
   return (
-    <section className="py-20 sm:py-28">
+    <section id="theology" className="py-20 sm:py-28">
       <div className="mx-auto w-full max-w-5xl px-6 sm:px-8">
         <Card className="bg-card/80">
           <CardHeader className="space-y-4">

@@ -34,7 +34,7 @@ const features = [
 
 export default function FeaturesSection() {
   return (
-    <section className="py-20 sm:py-28">
+    <section id="features" className="py-20 sm:py-28">
       <div className="mx-auto w-full max-w-5xl px-6 sm:px-8">
         <div className="space-y-10">
           <div className="space-y-4">
