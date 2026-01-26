@@ -5,8 +5,7 @@ import { Button } from "@/components/ui/button";
 const navLinks = [
   { href: "#overview", label: "Overview" },
   { href: "#features", label: "Features" },
-  { href: "#stories", label: "Stories" },
-  { href: "#testimonials", label: "Testimonials" },
+  { href: "#waitlist", label: "Waitlist" },
 ];
 
 export default function Topbar() {
