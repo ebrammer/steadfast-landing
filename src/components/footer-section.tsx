@@ -20,15 +20,13 @@ export default function FooterSection() {
             </p>
           </div>
           <div className="flex justify-start md:justify-end">
-            <span className="flex h-16 w-16 items-center justify-center rounded-full bg-white shadow-sm">
-              <Image
-                src="/images/faviconOrange.png"
-                alt="Steadfast: Faith emblem"
-                width={36}
-                height={36}
-                className="h-9 w-9"
-              />
-            </span>
+            <Image
+              src="/images/faviconOrange.png"
+              alt="Steadfast: Faith emblem"
+              width={64}
+              height={64}
+              className="h-16 w-16"
+            />
           </div>
         </div>
         <div className="mt-12 flex flex-col items-center gap-4 text-sm text-muted-foreground sm:flex-row sm:justify-center">

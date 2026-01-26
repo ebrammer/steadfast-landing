@@ -14,15 +14,13 @@ export default function Topbar() {
     <header className="sticky top-0 z-50 w-full border-b border-border/70 bg-background/95 backdrop-blur">
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-4 sm:px-8">
         <a href="#top" className="flex items-center gap-3">
-          <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white shadow-sm">
-            <Image
-              src="/images/faviconOrange.png"
-              alt="Steadfast: Faith emblem"
-              width={20}
-              height={20}
-              className="h-5 w-5"
-            />
-          </span>
+          <Image
+            src="/images/faviconOrange.png"
+            alt="Steadfast: Faith emblem"
+            width={28}
+            height={28}
+            className="h-7 w-7"
+          />
           <span className="text-xs font-semibold uppercase tracking-[0.28em] text-muted-foreground">
             Steadfast: Faith
           </span>
