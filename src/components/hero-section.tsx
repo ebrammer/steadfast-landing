@@ -34,16 +34,23 @@ export default function HeroSection() {
               <a href="#overview">Learn more</a>
             </Button>
           </div>
-          <div className="w-full max-w-4xl pt-6">
-            <Card className="border-transparent bg-card shadow-md">
-              <CardContent className="p-4 sm:p-6">
+          <div className="w-full pt-6">
+            <Card
+              className="relative overflow-hidden border-transparent bg-card shadow-md"
+              style={{
+                backgroundImage: "url('/images/gridBottom.png')",
+                backgroundPosition: "center",
+                backgroundSize: "cover",
+              }}
+            >
+              <CardContent className="relative flex justify-center px-6 py-12 sm:px-12">
                 <Image
-                  src="/images/screenMockupCutoff.png"
-                  alt="Steadfast: Faith app preview"
-                  width={1200}
+                  src="/images/devices.png"
+                  alt="Steadfast: Faith on multiple devices"
+                  width={1400}
                   height={900}
-                  className="h-auto w-full rounded-[32px] object-contain"
-                  sizes="(min-width: 1024px) 60vw, 100vw"
+                  className="h-auto w-full max-w-5xl object-contain"
+                  sizes="(min-width: 1024px) 70vw, 100vw"
                   priority
                 />
               </CardContent>
