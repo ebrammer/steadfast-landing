@@ -10,7 +10,7 @@ export default function HeroSection() {
         <div className="flex flex-col items-center gap-8 text-center">
           <Badge className="w-fit">Now in development</Badge>
           <h1 className="max-w-4xl text-4xl font-semibold leading-tight tracking-tight text-foreground sm:text-6xl">
-            Scripture-shaped faithfulness in ordinary Christian life
+            Growing with God in ordinary Christian life
           </h1>
           <p className="max-w-2xl text-lg leading-relaxed text-muted-foreground sm:text-xl">
             Steadfast: Faith helps Christians keep a daily rhythm of prayer,
