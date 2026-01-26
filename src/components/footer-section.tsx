@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 export default function FooterSection() {
   return (
     <footer className="bg-background py-16">
-      <div className="mx-auto w-full max-w-7xl px-6 sm:px-8">
+      <div className="mx-auto w-full max-w-5xl px-6 sm:px-8">
         <div className="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
           <div className="max-w-3xl space-y-5">
             <h2 className="text-3xl font-semibold leading-tight text-foreground sm:text-4xl">
