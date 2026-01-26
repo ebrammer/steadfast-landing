@@ -33,27 +33,27 @@ export default function HeroSection() {
               <a href="#overview">Learn more</a>
             </Button>
           </div>
-          <div className="w-full pt-6">
-            <div
-              className="relative overflow-hidden rounded-[32px]"
-              style={{
-                backgroundImage: "url('/images/gridBottom.png')",
-                backgroundPosition: "center",
-                backgroundSize: "cover",
-              }}
-            >
-              <div className="relative flex justify-center px-6 py-12 sm:px-12">
-                <Image
-                  src="/images/devices.png"
-                  alt="Steadfast: Faith on multiple devices"
-                  width={1400}
-                  height={900}
-                  className="h-auto w-full max-w-5xl object-contain"
-                  sizes="(min-width: 1024px) 70vw, 100vw"
-                  priority
-                />
-              </div>
-            </div>
+        </div>
+      </div>
+      <div className="mt-10 w-full">
+        <div
+          className="relative overflow-hidden"
+          style={{
+            backgroundImage: "url('/images/gridBottom.png')",
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+          }}
+        >
+          <div className="relative mx-auto flex w-full max-w-6xl justify-center py-12">
+            <Image
+              src="/images/devices.png"
+              alt="Steadfast: Faith on multiple devices"
+              width={1400}
+              height={900}
+              className="h-auto w-full object-contain"
+              sizes="(min-width: 1024px) 70vw, 100vw"
+              priority
+            />
           </div>
         </div>
       </div>
