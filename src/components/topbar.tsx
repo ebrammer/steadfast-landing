@@ -3,16 +3,16 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 
 const navLinks = [
-  { href: "#learn-more", label: "Overview" },
-  { href: "#features", label: "Practices" },
-  { href: "#scripture", label: "Scripture" },
-  { href: "#theology", label: "Theology" },
+  { href: "#overview", label: "Overview" },
+  { href: "#features", label: "Features" },
+  { href: "#stories", label: "Stories" },
+  { href: "#testimonials", label: "Testimonials" },
 ];
 
 export default function Topbar() {
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/80 bg-background/90 backdrop-blur">
-      <div className="mx-auto flex w-full max-w-5xl items-center justify-between px-6 py-4 sm:px-8">
+    <header className="sticky top-0 z-50 w-full border-b border-border/70 bg-background/95 backdrop-blur">
+      <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-4 sm:px-8">
         <a href="#top" className="flex items-center gap-3">
           <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white shadow-sm">
             <Image

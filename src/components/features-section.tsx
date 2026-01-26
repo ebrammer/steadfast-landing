@@ -41,8 +41,7 @@ const features = [
   },
   {
     title: "Scripture reading, without friction",
-    description:
-      "Follow structured Bible reading plans or read freely.",
+    description: "Follow structured Bible reading plans or read freely.",
     detail:
       "When desired, Scripture links open directly in your preferred Bible or audio Bible app, allowing you to read or listen without interruption.",
   },
@@ -50,9 +49,9 @@ const features = [
 
 export default function FeaturesSection() {
   return (
-    <section id="features" className="py-20 sm:py-28">
-      <div className="mx-auto w-full max-w-5xl px-6 sm:px-8">
-        <div className="grid gap-12 lg:grid-cols-[0.9fr,1.1fr] lg:items-start">
+    <section id="features" className="py-24 sm:py-32">
+      <div className="mx-auto w-full max-w-7xl px-6 sm:px-8">
+        <div className="grid gap-12 lg:grid-cols-[1.05fr,0.95fr] lg:items-start">
           <div className="space-y-8">
             <div className="space-y-4">
               <Badge className="w-fit">Features</Badge>
@@ -64,10 +63,11 @@ export default function FeaturesSection() {
                 place so daily faithfulness remains clear and uninterrupted.
               </p>
             </div>
-            <Card className="rounded-3xl border-transparent bg-card/80 shadow-lg">
-              <CardContent className="divide-y divide-border/70 px-6 py-2">
-                {features.map((feature) => (
-                  <div key={feature.title} className="space-y-3 py-5">
+            <div className="space-y-6">
+              {features.map((feature) => (
+                <div key={feature.title} className="flex gap-4">
+                  <span className="mt-2 h-2 w-2 flex-shrink-0 rounded-full bg-primary/80" />
+                  <div className="space-y-2">
                     <h3 className="text-lg font-semibold text-foreground">
                       {feature.title}
                     </h3>
@@ -78,36 +78,22 @@ export default function FeaturesSection() {
                       {feature.detail}
                     </p>
                   </div>
-                ))}
-              </CardContent>
-            </Card>
+                </div>
+              ))}
+            </div>
           </div>
-          <div className="space-y-6">
-            <Card className="rounded-3xl border-transparent bg-card shadow-xl">
-              <CardContent className="p-4 sm:p-6">
-                <Image
-                  src="/images/focusModeNew.png"
-                  alt="Scripture reading mode in Steadfast"
-                  width={820}
-                  height={640}
-                  className="h-auto w-full rounded-3xl object-contain"
-                  sizes="(min-width: 1024px) 36vw, 100vw"
-                />
-              </CardContent>
-            </Card>
-            <Card className="rounded-3xl border-transparent bg-card/80 shadow-lg">
-              <CardContent className="p-4 sm:p-6">
-                <Image
-                  src="/images/addNewRoutine.png"
-                  alt="Building a daily devotional routine in Steadfast"
-                  width={820}
-                  height={640}
-                  className="h-auto w-full rounded-3xl object-contain"
-                  sizes="(min-width: 1024px) 36vw, 100vw"
-                />
-              </CardContent>
-            </Card>
-          </div>
+          <Card className="border-transparent bg-card shadow-md">
+            <CardContent className="p-4 sm:p-6">
+              <Image
+                src="/images/focusModeNew.png"
+                alt="Scripture reading mode in Steadfast"
+                width={920}
+                height={720}
+                className="h-auto w-full rounded-[28px] object-contain"
+                sizes="(min-width: 1024px) 40vw, 100vw"
+              />
+            </CardContent>
+          </Card>
         </div>
       </div>
     </section>

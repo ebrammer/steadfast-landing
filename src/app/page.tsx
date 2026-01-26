@@ -1,15 +1,15 @@
 import CallToActionSection from "@/components/call-to-action-section";
 import FooterSection from "@/components/footer-section";
+import GallerySection from "@/components/gallery-section";
 import FeaturesSection from "@/components/features-section";
 import HeroSection from "@/components/hero-section";
+import NewsletterSection from "@/components/newsletter-section";
 import OverviewBackgroundSection from "@/components/overview-background-section";
-import PracticeSection from "@/components/practice-section";
 import PreviewStripSection from "@/components/preview-strip-section";
-import ScriptureSection from "@/components/scripture-section";
+import SecondaryFeatureSection from "@/components/secondary-feature-section";
+import SocialProofSection from "@/components/social-proof-section";
 import TestimonialsSection from "@/components/testimonials-section";
-import TheologicalOrientationSection from "@/components/theological-orientation-section";
 import Topbar from "@/components/topbar";
-import WhatSteadfastIsSection from "@/components/what-steadfast-is-section";
 
 export default function Home() {
   return (
@@ -19,13 +19,13 @@ export default function Home() {
         <HeroSection />
         <PreviewStripSection />
         <OverviewBackgroundSection />
-        <WhatSteadfastIsSection />
         <FeaturesSection />
-        <ScriptureSection />
-        <TheologicalOrientationSection />
-        <PracticeSection />
+        <SecondaryFeatureSection />
+        <SocialProofSection />
+        <GallerySection />
         <TestimonialsSection />
         <CallToActionSection />
+        <NewsletterSection />
       </main>
       <FooterSection />
     </div>
