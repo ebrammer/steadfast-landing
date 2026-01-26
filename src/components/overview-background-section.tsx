@@ -11,6 +11,7 @@ export default function OverviewBackgroundSection() {
             backgroundImage: "url('/images/gridBottom.png')",
             backgroundPosition: "center",
             backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
           }}
         >
           <div className="absolute inset-0 bg-background/85" />

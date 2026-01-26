@@ -42,6 +42,7 @@ export default function HeroSection() {
             backgroundImage: "url('/images/gridBottom.png')",
             backgroundPosition: "center",
             backgroundSize: "140%",
+            backgroundRepeat: "no-repeat",
           }}
         >
           <div className="relative mx-auto flex w-full max-w-5xl justify-center py-10 sm:py-14">
