@@ -50,7 +50,7 @@ export default function FeaturesSection() {
   return (
     <section id="features" className="py-24 sm:py-32">
       <div className="mx-auto w-full max-w-7xl px-6 sm:px-8">
-        <div className="grid gap-12 md:grid-cols-[0.95fr,1.05fr] md:items-start">
+        <div className="grid gap-12 sm:grid-cols-[0.95fr,1.05fr] sm:items-start">
           <div className="relative overflow-hidden rounded-[32px] bg-card shadow-sm">
             <div className="flex justify-center px-6 py-10 sm:px-10">
               <Image
