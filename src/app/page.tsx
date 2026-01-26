@@ -1,4 +1,5 @@
 import FeaturesSection from "@/components/features-section";
+import HeroGraphicSection from "@/components/hero-graphic-section";
 import HeroSection from "@/components/hero-section";
 import Topbar from "@/components/topbar";
 import FooterSection from "@/components/footer-section";
@@ -9,6 +10,7 @@ export default function Home() {
       <Topbar />
       <main className="flex flex-col">
         <HeroSection />
+        <HeroGraphicSection />
         <FeaturesSection />
       </main>
       <FooterSection />
