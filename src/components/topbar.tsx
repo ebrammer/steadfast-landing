@@ -11,7 +11,7 @@ const navLinks = [
 export default function Topbar() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/70 bg-background/95 backdrop-blur">
-      <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-4 sm:px-8">
+      <div className="relative mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-4 sm:px-8">
         <a href="#top" className="flex items-center gap-3">
           <Image
             src="/images/faviconOrange.png"
@@ -24,7 +24,10 @@ export default function Topbar() {
             Steadfast: Faith
           </span>
         </a>
-        <nav className="hidden items-center gap-1 md:flex" aria-label="Primary">
+        <nav
+          className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-1 md:flex"
+          aria-label="Primary"
+        >
           {navLinks.map((link) => (
             <Button
               key={link.href}
