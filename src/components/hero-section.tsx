@@ -41,17 +41,17 @@ export default function HeroSection() {
           style={{
             backgroundImage: "url('/images/gridBottom.png')",
             backgroundPosition: "center",
-            backgroundSize: "cover",
+            backgroundSize: "140%",
           }}
         >
-          <div className="relative mx-auto flex w-full max-w-6xl justify-center py-12">
+          <div className="relative mx-auto flex w-full max-w-5xl justify-center py-10 sm:py-14">
             <Image
               src="/images/devices.png"
               alt="Steadfast: Faith on multiple devices"
-              width={1400}
-              height={900}
-              className="h-auto w-full object-contain"
-              sizes="(min-width: 1024px) 70vw, 100vw"
+              width={1200}
+              height={800}
+              className="h-auto w-full max-w-4xl object-contain"
+              sizes="(min-width: 1024px) 60vw, 100vw"
               priority
             />
           </div>
