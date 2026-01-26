@@ -2,7 +2,6 @@ import Image from "next/image";
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 
 export default function HeroSection() {
   return (
@@ -35,15 +34,15 @@ export default function HeroSection() {
             </Button>
           </div>
           <div className="w-full pt-6">
-            <Card
-              className="relative overflow-hidden border-transparent bg-card shadow-md"
+            <div
+              className="relative overflow-hidden rounded-[32px]"
               style={{
                 backgroundImage: "url('/images/gridBottom.png')",
                 backgroundPosition: "center",
                 backgroundSize: "cover",
               }}
             >
-              <CardContent className="relative flex justify-center px-6 py-12 sm:px-12">
+              <div className="relative flex justify-center px-6 py-12 sm:px-12">
                 <Image
                   src="/images/devices.png"
                   alt="Steadfast: Faith on multiple devices"
@@ -53,8 +52,8 @@ export default function HeroSection() {
                   sizes="(min-width: 1024px) 70vw, 100vw"
                   priority
                 />
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           </div>
         </div>
       </div>
