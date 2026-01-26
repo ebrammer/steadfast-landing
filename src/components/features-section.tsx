@@ -1,7 +1,6 @@
 import Image from "next/image";
 
 import { Badge } from "@/components/ui/badge";
-import { Card, CardContent } from "@/components/ui/card";
 
 const features = [
   {
@@ -52,7 +51,27 @@ export default function FeaturesSection() {
     <section id="features" className="py-24 sm:py-32">
       <div className="mx-auto w-full max-w-7xl px-6 sm:px-8">
         <div className="grid gap-12 lg:grid-cols-[0.95fr,1.05fr] lg:items-start">
-          <div className="order-2 space-y-8 lg:order-2">
+          <div
+            className="relative overflow-hidden rounded-[32px]"
+            style={{
+              backgroundImage: "url('/images/gridBottom.png')",
+              backgroundPosition: "center",
+              backgroundSize: "140%",
+              backgroundRepeat: "no-repeat",
+            }}
+          >
+            <div className="flex justify-center px-6 py-10 sm:px-10">
+              <Image
+                src="/images/devices.png"
+                alt="Steadfast: Faith on multiple devices"
+                width={1200}
+                height={800}
+                className="h-auto w-full max-w-xl object-contain"
+                sizes="(min-width: 1024px) 40vw, 100vw"
+              />
+            </div>
+          </div>
+          <div className="space-y-8">
             <div className="space-y-4">
               <Badge className="w-fit">Features</Badge>
               <h2 className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
@@ -82,18 +101,6 @@ export default function FeaturesSection() {
               ))}
             </div>
           </div>
-          <Card className="order-1 border-transparent bg-card shadow-md lg:order-1">
-            <CardContent className="p-4 sm:p-6">
-              <Image
-                src="/images/focusModeNew.png"
-                alt="Scripture reading mode in Steadfast: Faith"
-                width={920}
-                height={720}
-                className="h-auto w-full rounded-[28px] object-contain"
-                sizes="(min-width: 1024px) 40vw, 100vw"
-              />
-            </CardContent>
-          </Card>
         </div>
       </div>
     </section>

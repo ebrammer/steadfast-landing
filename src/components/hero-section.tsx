@@ -1,11 +1,9 @@
-import Image from "next/image";
-
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
 export default function HeroSection() {
   return (
-    <section className="py-24 sm:py-32">
+    <section id="overview" className="py-24 sm:py-32">
       <div className="mx-auto w-full max-w-7xl px-6 sm:px-8">
         <div className="flex flex-col items-center gap-8 text-center">
           <Badge className="w-fit">Now in development</Badge>
@@ -30,31 +28,8 @@ export default function HeroSection() {
               size="lg"
               className="w-full rounded-full px-6 sm:w-auto"
             >
-              <a href="#overview">Learn more</a>
+              <a href="#features">Learn more</a>
             </Button>
-          </div>
-        </div>
-      </div>
-      <div className="mt-10 w-full">
-        <div
-          className="relative overflow-hidden"
-          style={{
-            backgroundImage: "url('/images/gridBottom.png')",
-            backgroundPosition: "center",
-            backgroundSize: "140%",
-            backgroundRepeat: "no-repeat",
-          }}
-        >
-          <div className="relative mx-auto flex w-full max-w-5xl justify-center py-10 sm:py-14">
-            <Image
-              src="/images/devices.png"
-              alt="Steadfast: Faith on multiple devices"
-              width={1200}
-              height={800}
-              className="h-auto w-full max-w-4xl object-contain"
-              sizes="(min-width: 1024px) 60vw, 100vw"
-              priority
-            />
           </div>
         </div>
       </div>
