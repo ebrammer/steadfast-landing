@@ -33,8 +33,8 @@ export default function TestimonialsSection() {
               Stories taking shape.
             </h2>
             <p className="mx-auto max-w-2xl text-base leading-relaxed text-muted-foreground">
-              We will share real testimonies here as Steadfast moves through
-              private beta.
+              We will share real testimonies here as Steadfast: Faith moves
+              through private beta.
             </p>
           </div>
           <div className="grid gap-6 md:grid-cols-3">

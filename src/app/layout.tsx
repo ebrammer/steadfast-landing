@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Steadfast Faith",
+  title: "Steadfast: Faith",
   description:
-    "Steadfast is a Christian devotional app for Scripture, prayer, and journaling.",
+    "Steadfast: Faith is a Christian devotional app for Scripture, prayer, and journaling.",
 };
 
 export default function RootLayout({

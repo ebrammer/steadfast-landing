@@ -14,8 +14,8 @@ export default function CallToActionSection() {
                 Faithfulness is cultivated over time.
               </h2>
               <p className="text-base leading-relaxed text-muted-foreground">
-                Steadfast is in development. Join the waitlist to follow along
-                as we build.
+                Steadfast: Faith is in development. Join the waitlist to follow
+                along as we build.
               </p>
               <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
                 <Button size="lg" className="w-full rounded-full px-6 sm:w-auto">
@@ -40,7 +40,7 @@ export default function CallToActionSection() {
             <div className="hidden lg:block">
               <Image
                 src="/images/devices.png"
-                alt="Steadfast preview on devices"
+                alt="Steadfast: Faith preview on devices"
                 width={820}
                 height={620}
                 className="h-auto w-full rounded-[28px] object-contain"

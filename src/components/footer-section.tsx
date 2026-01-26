@@ -7,7 +7,7 @@ export default function FooterSection() {
         <div className="grid gap-10 md:grid-cols-[1.2fr,1fr,1fr,1fr]">
           <div className="space-y-4">
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-muted-foreground">
-              Steadfast
+              Steadfast: Faith
             </p>
             <p className="max-w-xs text-sm leading-relaxed text-muted-foreground">
               A devotional companion for Scripture, prayer, and journaling.
@@ -72,7 +72,7 @@ export default function FooterSection() {
           </div>
         </div>
         <div className="mt-12 flex flex-col gap-4 border-t border-border/70 pt-6 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
-          <p>(c) 2026 Steadfast. All rights reserved.</p>
+          <p>(c) 2026 Steadfast: Faith. All rights reserved.</p>
           <div className="flex gap-4">
             <a href="/docs/Online_Privacy_Policy.pdf" className="hover:text-foreground">
               Privacy

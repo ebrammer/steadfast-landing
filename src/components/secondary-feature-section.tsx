@@ -12,7 +12,7 @@ export default function SecondaryFeatureSection() {
             <CardContent className="p-4 sm:p-6">
               <Image
                 src="/images/screenMockupCutoff.png"
-                alt="Steadfast devotional rhythm preview"
+                alt="Steadfast: Faith devotional rhythm preview"
                 width={920}
                 height={820}
                 className="h-auto w-full rounded-[28px] object-contain"
@@ -27,8 +27,8 @@ export default function SecondaryFeatureSection() {
             </h2>
             <div className="space-y-4 text-base leading-relaxed text-muted-foreground">
               <p>
-                Steadfast is a devotional companion for ordinary, enduring
-                Christian practice.
+                Steadfast: Faith is a devotional companion for ordinary,
+                enduring Christian practice.
               </p>
               <p>
                 It brings Scripture reading, prayer, and journaling into a
@@ -36,7 +36,7 @@ export default function SecondaryFeatureSection() {
                 and the means of grace in a distracted age.
               </p>
               <p>
-                Steadfast is shaped by historic Protestant spirituality:
+                Steadfast: Faith is shaped by historic Protestant spirituality:
                 Scripture-centered, ordinary, and durable. It is not a
                 replacement for the local church; it is a tool to support daily
                 faithfulness within it.

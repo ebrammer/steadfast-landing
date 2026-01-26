@@ -5,19 +5,19 @@ import { Card, CardContent } from "@/components/ui/card";
 const previews = [
   {
     src: "/images/focusMode.png",
-    alt: "Focused reading view in Steadfast",
+    alt: "Focused reading view in Steadfast: Faith",
     label: "Focused reading",
     offsetClass: "sm:translate-y-6",
   },
   {
     src: "/images/addNewRoutine.png",
-    alt: "Routine builder in Steadfast",
+    alt: "Routine builder in Steadfast: Faith",
     label: "Daily routines",
     offsetClass: "sm:-translate-y-2",
   },
   {
     src: "/images/screenMockupCutoff.png",
-    alt: "Steadfast screen preview",
+    alt: "Steadfast: Faith screen preview",
     label: "Guided practice",
     offsetClass: "sm:translate-y-10",
   },

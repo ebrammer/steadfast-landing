@@ -13,7 +13,7 @@ export default function NewsletterSection() {
                 Join the newsletter.
               </h2>
               <p className="max-w-xl text-sm leading-relaxed text-background/80">
-                Receive occasional updates as Steadfast moves through
+                Receive occasional updates as Steadfast: Faith moves through
                 development. No spam, no noise.
               </p>
             </div>

@@ -14,8 +14,8 @@ export default function HeroSection() {
             Scripture-shaped faithfulness in ordinary Christian life
           </h1>
           <p className="max-w-2xl text-lg leading-relaxed text-muted-foreground sm:text-xl">
-            Steadfast: Faith helps Christians create and keep a daily rhythm of
-            prayer, journaling, and Scripture meditation/memorization.
+            Steadfast: Faith helps Christians keep a daily rhythm of prayer,
+            journaling, and Scripture meditation and memorization.
           </p>
           <div className="flex w-full flex-col gap-4 sm:w-auto sm:flex-row sm:items-center">
             <Button
@@ -39,7 +39,7 @@ export default function HeroSection() {
               <CardContent className="p-4 sm:p-6">
                 <Image
                   src="/images/screenMockupCutoff.png"
-                  alt="Steadfast app preview"
+                  alt="Steadfast: Faith app preview"
                   width={1200}
                   height={900}
                   className="h-auto w-full rounded-[32px] object-contain"

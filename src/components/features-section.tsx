@@ -35,7 +35,7 @@ const features = [
   {
     title: "A rule of life, made practical",
     description:
-      "Steadfast is organized around a daily devotional routine, the heart of the app.",
+      "Steadfast: Faith is organized around a daily devotional routine, the heart of the app.",
     detail:
       "Each routine can draw from specific prayers, people, lists, Scripture collections, or reading plans, forming a consistent pattern of practice.",
   },
@@ -59,8 +59,8 @@ export default function FeaturesSection() {
                 Practices held together.
               </h2>
               <p className="text-base leading-relaxed text-muted-foreground">
-                Steadfast gathers Scripture, prayer, and journaling into one
-                place so daily faithfulness remains clear and uninterrupted.
+                Steadfast: Faith gathers Scripture, prayer, and journaling into
+                one place so daily faithfulness remains clear and uninterrupted.
               </p>
             </div>
             <div className="space-y-6">
@@ -86,7 +86,7 @@ export default function FeaturesSection() {
             <CardContent className="p-4 sm:p-6">
               <Image
                 src="/images/focusModeNew.png"
-                alt="Scripture reading mode in Steadfast"
+                alt="Scripture reading mode in Steadfast: Faith"
                 width={920}
                 height={720}
                 className="h-auto w-full rounded-[28px] object-contain"
