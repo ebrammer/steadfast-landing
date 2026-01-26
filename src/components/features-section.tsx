@@ -51,21 +51,13 @@ export default function FeaturesSection() {
     <section id="features" className="py-24 sm:py-32">
       <div className="mx-auto w-full max-w-7xl px-6 sm:px-8">
         <div className="grid gap-12 lg:grid-cols-[0.95fr,1.05fr] lg:items-start">
-          <div
-            className="relative overflow-hidden rounded-[32px]"
-            style={{
-              backgroundImage: "url('/images/gridBottom.png')",
-              backgroundPosition: "center",
-              backgroundSize: "140%",
-              backgroundRepeat: "no-repeat",
-            }}
-          >
+          <div className="relative overflow-hidden rounded-[32px] bg-card shadow-sm">
             <div className="flex justify-center px-6 py-10 sm:px-10">
               <Image
-                src="/images/devices.png"
-                alt="Steadfast: Faith on multiple devices"
+                src="/images/focusModeNew.png"
+                alt="Focused Scripture view in Steadfast: Faith"
                 width={1200}
-                height={800}
+                height={900}
                 className="h-auto w-full max-w-xl object-contain"
                 sizes="(min-width: 1024px) 40vw, 100vw"
               />
