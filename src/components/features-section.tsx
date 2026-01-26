@@ -51,17 +51,15 @@ export default function FeaturesSection() {
     <section id="features" className="py-24 sm:py-32">
       <div className="mx-auto w-full max-w-7xl px-6 sm:px-8">
         <div className="grid gap-12 sm:grid-cols-[0.95fr_1.05fr] sm:items-start">
-          <div className="relative overflow-hidden rounded-[32px] bg-card shadow-sm">
-            <div className="flex justify-center px-6 py-10 sm:px-10">
-              <Image
-                src="/images/focusModeNew.png"
-                alt="Focused Scripture view in Steadfast: Faith"
-                width={1200}
-                height={900}
-                className="h-auto w-full max-w-xl object-contain"
-                sizes="(min-width: 1024px) 40vw, 100vw"
-              />
-            </div>
+          <div className="flex justify-center">
+            <Image
+              src="/images/focusModeNew.png"
+              alt="Focused Scripture view in Steadfast: Faith"
+              width={1200}
+              height={900}
+              className="h-auto w-full max-w-xl object-contain"
+              sizes="(min-width: 1024px) 40vw, 100vw"
+            />
           </div>
           <div className="space-y-8">
             <div className="space-y-4">
@@ -74,19 +72,15 @@ export default function FeaturesSection() {
                 one place so daily faithfulness remains clear and uninterrupted.
               </p>
             </div>
-            <div className="space-y-6">
+            <div className="space-y-5">
               {features.map((feature) => (
                 <div key={feature.title} className="flex gap-4">
-                  <span className="mt-2 h-2 w-2 flex-shrink-0 rounded-full bg-primary/80" />
-                  <div className="space-y-2">
-                    <h3 className="text-lg font-semibold text-foreground">
+                  <div className="space-y-1">
+                    <h3 className="text-base font-semibold text-foreground">
                       {feature.title}
                     </h3>
                     <p className="text-sm leading-relaxed text-muted-foreground">
-                      {feature.description}
-                    </p>
-                    <p className="text-sm leading-relaxed text-muted-foreground">
-                      {feature.detail}
+                      {feature.description} {feature.detail}
                     </p>
                   </div>
                 </div>
