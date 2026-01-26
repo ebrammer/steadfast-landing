@@ -11,11 +11,11 @@ export default function HeroSection() {
         <div className="flex flex-col items-center gap-8 text-center">
           <Badge className="w-fit">Now in development</Badge>
           <h1 className="max-w-4xl text-4xl font-semibold leading-tight tracking-tight text-foreground sm:text-6xl">
-            A steady rule of life, rooted in Scripture.
+            Scripture-shaped faithfulness in ordinary Christian life
           </h1>
           <p className="max-w-2xl text-lg leading-relaxed text-muted-foreground sm:text-xl">
-            Steadfast helps Christians keep a daily rhythm of Scripture reading,
-            prayer, and journaling, without distraction.
+            Steadfast: Faith helps Christians create and keep a daily rhythm of
+            prayer, journaling, and Scripture meditation/memorization.
           </p>
           <div className="flex w-full flex-col gap-4 sm:w-auto sm:flex-row sm:items-center">
             <Button
