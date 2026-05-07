@@ -34,7 +34,7 @@ export default function FooterSection() {
             <a href="#">Contact</a>
           </Button>
           <Button asChild variant="link" className="px-0 text-muted-foreground">
-            <a href="/docs/Online_Privacy_Policy.pdf" target="_blank" rel="noreferrer">
+            <a href="/docs/Steadfast_Privacy_Policy.pdf" target="_blank" rel="noreferrer">
               Privacy Policy
             </a>
           </Button>
