@@ -2,6 +2,7 @@ import Image from "next/image";
 
 import AppStoreBadge from "@/components/landing-v2/app-store-badge";
 import DeviceShowcase from "@/components/landing-v2/device-showcase";
+import HeroImageCarousel from "@/components/landing-v2/hero-image-carousel";
 import V2Topbar from "@/components/landing-v2/v2-topbar";
 import { Badge } from "@/components/ui/badge";
 
@@ -10,28 +11,48 @@ const featureStories = [
     eyebrow: "Prayer",
     title: "Remember the people and needs you carry.",
     body: "Save prayers in plain words, connect them to people and lists, and return without turning prayer into a performance system.",
-    image: "/images/app-store/iphone-prayer.png",
+    bullets: [
+      "Keep requests, updates, answers, and people together.",
+      "Return gently from Home, a list, or a person profile.",
+      "Connect prayers to Scripture, journals, routines, and reminders.",
+    ],
+    image: "/images/website/iphone-prayer.png",
     alt: "Steadfast prayer detail screen with prayer history and notes.",
   },
   {
     eyebrow: "Scripture",
     title: "Keep passages close enough to return to.",
     body: "Save Scripture for prayer, study, encouragement, or memorization, then connect it to the places it shaped your day.",
-    image: "/images/app-store/iphone-scripture.png",
+    bullets: [
+      "Save passages you want nearby for prayer, study, or encouragement.",
+      "Open passages in your preferred Bible app when you are ready to read.",
+      "Group verses into collections around themes, seasons, or needs.",
+    ],
+    image: "/images/website/iphone-scripture.png",
     alt: "Steadfast scripture passage screen with saved passage details.",
   },
   {
     eyebrow: "Memorization",
     title: "Practice Scripture gently over time.",
     body: "Use short, repeatable tools for recall, review, and maintenance so familiar words stay near without pressure.",
-    image: "/images/app-store/iphone-memorization.png",
+    bullets: [
+      "Move slowly from learning to review to lighter maintenance.",
+      "Practice with flash cards, word recall, speak and check, and more.",
+      "Use a few attentive minutes instead of forcing long sessions.",
+    ],
+    image: "/images/website/iphone-memorization.png",
     alt: "Steadfast memorization tools screen with practice options.",
   },
   {
     eyebrow: "Routines",
     title: "Build rhythms small enough to repeat.",
     body: "Bring prayers, passages, reading plans, people, and reflection into a repeatable flow for ordinary days.",
-    image: "/images/app-store/iphone-routine.png",
+    bullets: [
+      "Prepare the next small step before the day gets crowded.",
+      "Combine prayer, Scripture, people, reading, and reflection.",
+      "Adjust the rhythm when the season changes.",
+    ],
+    image: "/images/website/iphone-routine.png",
     alt: "Steadfast routine screen with a list of routine items.",
   },
 ];
@@ -86,45 +107,7 @@ function Hero() {
             <AppStoreBadge />
           </div>
         </div>
-        <div className="relative mx-auto min-h-[520px] w-full max-w-4xl sm:min-h-[620px] lg:min-h-[680px]">
-          <div className="absolute left-1/2 top-1/2 h-[72%] w-[82%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-orange-100/60 blur-3xl dark:bg-orange-500/10" />
-          <Image
-            src="/images/app-store/ipad-home.png"
-            alt="Steadfast home dashboard on iPad."
-            width={2064}
-            height={2752}
-            className="absolute left-0 top-14 hidden h-auto w-[46%] -rotate-6 rounded-[22px] object-contain shadow-[0_28px_70px_rgba(15,23,42,0.16)] lg:block dark:shadow-[0_28px_70px_rgba(0,0,0,0.5)]"
-            sizes="(min-width: 1024px) 26vw, 0px"
-            priority
-          />
-          <Image
-            src="/images/app-store/iphone-scripture.png"
-            alt="Steadfast scripture passage screen on iPhone."
-            width={1242}
-            height={2688}
-            className="absolute right-[4%] top-8 h-auto w-[36%] rotate-6 rounded-[28px] object-contain shadow-[0_24px_65px_rgba(15,23,42,0.18)] sm:w-[30%] lg:right-[1%] lg:w-[26%] dark:shadow-[0_24px_65px_rgba(0,0,0,0.5)]"
-            sizes="(min-width: 1024px) 16vw, (min-width: 640px) 28vw, 36vw"
-            priority
-          />
-          <Image
-            src="/images/app-store/iphone-memorization.png"
-            alt="Steadfast memorization practice tools on iPhone."
-            width={1242}
-            height={2688}
-            className="absolute bottom-6 left-[2%] h-auto w-[36%] -rotate-3 rounded-[28px] object-contain shadow-[0_24px_65px_rgba(15,23,42,0.16)] sm:w-[30%] lg:left-[20%] lg:w-[25%] dark:shadow-[0_24px_65px_rgba(0,0,0,0.45)]"
-            sizes="(min-width: 1024px) 16vw, (min-width: 640px) 28vw, 36vw"
-            priority
-          />
-          <Image
-            src="/images/app-store/iphone-home.png"
-            alt="Steadfast home dashboard on iPhone."
-            width={1242}
-            height={2688}
-            className="absolute left-1/2 top-4 h-auto w-[46%] -translate-x-1/2 rounded-[32px] object-contain shadow-[0_32px_80px_rgba(15,23,42,0.22)] sm:w-[38%] lg:top-2 lg:w-[32%] dark:shadow-[0_32px_80px_rgba(0,0,0,0.58)]"
-            sizes="(min-width: 1024px) 20vw, (min-width: 640px) 34vw, 46vw"
-            priority
-          />
-        </div>
+        <HeroImageCarousel />
       </div>
     </section>
   );
@@ -167,14 +150,25 @@ function FeatureStories() {
                 <p className="mt-5 text-lg leading-8 text-neutral-600 dark:text-neutral-300">
                   {feature.body}
                 </p>
+                <ul className="mt-6 space-y-3 text-left text-sm leading-6 text-neutral-600 dark:text-neutral-300">
+                  {feature.bullets.map((bullet) => (
+                    <li key={bullet} className="flex gap-3">
+                      <span
+                        aria-hidden="true"
+                        className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-orange-500"
+                      />
+                      <span>{bullet}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
               <div className="flex items-center justify-center">
                 <Image
                   src={feature.image}
                   alt={feature.alt}
-                  width={1242}
-                  height={2688}
-                  className="mx-auto h-auto max-h-[720px] w-full max-w-[340px] rounded-[30px] object-contain shadow-[0_22px_60px_rgba(15,23,42,0.14)] dark:shadow-[0_22px_60px_rgba(0,0,0,0.45)]"
+                  width={1050}
+                  height={2283}
+                  className="mx-auto h-auto max-h-[720px] w-full max-w-[340px] rounded-[34px] border border-white/90 object-contain shadow-[0_28px_76px_rgba(15,23,42,0.16)] dark:border-white/10 dark:shadow-[0_28px_76px_rgba(0,0,0,0.5)]"
                   sizes="(min-width: 1024px) 28vw, 86vw"
                 />
               </div>
@@ -204,13 +198,84 @@ function ConnectedPractice() {
         </div>
         <div className="flex justify-center">
           <Image
-            src="/images/app-store/ipad-connections.png"
+            src="/images/website/ipad-connections.png"
             alt="Steadfast connections screen showing related people, scripture, and entries."
-            width={2064}
-            height={2752}
-            className="h-auto w-full max-w-3xl rounded-[24px] object-contain shadow-[0_28px_70px_rgba(15,23,42,0.14)] dark:shadow-[0_28px_70px_rgba(0,0,0,0.45)]"
+            width={1640}
+            height={2360}
+            className="h-auto w-full max-w-3xl rounded-[30px] border border-white/90 object-contain shadow-[0_32px_84px_rgba(15,23,42,0.16)] dark:border-white/10 dark:shadow-[0_32px_84px_rgba(0,0,0,0.48)]"
             sizes="(min-width: 1024px) 52vw, 100vw"
           />
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function SocialShareCreator() {
+  const bullets = [
+    "Start from saved Scripture, prayers, entries, or other Steadfast content.",
+    "Switch between post and story formats for the channel you are sharing to.",
+    "Use presets, shuffle, recent styles, watermarks, and layout controls to move quickly.",
+    "Export or share a finished image without rebuilding the words from scratch.",
+  ];
+
+  return (
+    <section className="overflow-hidden bg-white py-20 dark:bg-neutral-950 sm:py-28">
+      <div className="mx-auto grid w-full max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+        <div className="relative mx-auto w-full max-w-4xl lg:order-1">
+          <div className="absolute left-1/2 top-1/2 h-[70%] w-[82%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-rose-100/70 blur-3xl dark:bg-rose-400/10" />
+          <div className="relative grid items-end gap-5 sm:grid-cols-2">
+            <figure className="mx-auto w-full max-w-[300px] sm:max-w-[330px]">
+              <Image
+                src="/images/website/social-share-story.png"
+                alt="Steadfast social share creator editing a story image."
+                width={1050}
+                height={2283}
+                className="h-auto w-full rounded-[34px] border border-white/90 object-contain shadow-[0_32px_82px_rgba(15,23,42,0.18)] dark:border-white/10 dark:shadow-[0_32px_82px_rgba(0,0,0,0.54)]"
+                sizes="(min-width: 1024px) 24vw, (min-width: 640px) 42vw, 74vw"
+              />
+              <figcaption className="mt-4 text-center text-xs font-semibold uppercase tracking-[0.18em] text-neutral-500 dark:text-neutral-400">
+                Story format
+              </figcaption>
+            </figure>
+            <figure className="mx-auto hidden w-full max-w-[360px] sm:block">
+              <Image
+                src="/images/website/social-share-post.png"
+                alt="Steadfast social share creator preparing a post image."
+                width={1640}
+                height={2360}
+                className="h-auto w-full rounded-[30px] border border-white/90 object-contain shadow-[0_32px_82px_rgba(15,23,42,0.16)] dark:border-white/10 dark:shadow-[0_32px_82px_rgba(0,0,0,0.5)]"
+                sizes="(min-width: 1024px) 28vw, (min-width: 640px) 44vw, 0px"
+              />
+              <figcaption className="mt-4 text-center text-xs font-semibold uppercase tracking-[0.18em] text-neutral-500 dark:text-neutral-400">
+                Post format
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+        <div className="mx-auto max-w-xl text-center lg:order-2 lg:mx-0 lg:text-left">
+          <p className="text-sm font-semibold uppercase tracking-[0.24em] text-rose-700 dark:text-rose-300">
+            Social share creator
+          </p>
+          <h2 className="mt-4 text-4xl font-semibold leading-tight text-neutral-950 dark:text-neutral-50 sm:text-5xl">
+            Turn saved Scripture into images worth sharing.
+          </h2>
+          <p className="mt-5 text-lg leading-8 text-neutral-600 dark:text-neutral-300">
+            Create social-ready images from the passages, prayers, and
+            reflections you already keep in Steadfast, then share them with
+            care beyond the app.
+          </p>
+          <ul className="mt-6 space-y-3 text-left text-sm leading-6 text-neutral-600 dark:text-neutral-300">
+            {bullets.map((bullet) => (
+              <li key={bullet} className="flex gap-3">
+                <span
+                  aria-hidden="true"
+                  className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-rose-500"
+                />
+                <span>{bullet}</span>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>
@@ -247,6 +312,54 @@ function SupportingFeatures() {
                 </p>
               </article>
             ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function TeamMessage() {
+  return (
+    <section className="bg-neutral-50 py-20 dark:bg-neutral-900 sm:py-28">
+      <div className="mx-auto w-full max-w-7xl px-5 sm:px-8">
+        <div className="grid gap-10 lg:grid-cols-[0.72fr_1.28fr] lg:items-start">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.24em] text-orange-700 dark:text-orange-300">
+              A message from the team
+            </p>
+            <h2 className="mt-4 text-4xl font-semibold leading-tight text-neutral-950 dark:text-neutral-50 sm:text-5xl">
+              The mission comes first.
+            </h2>
+          </div>
+          <div className="rounded-[16px] border border-orange-200/70 bg-white p-6 shadow-[0_24px_70px_rgba(15,23,42,0.08)] dark:border-orange-300/15 dark:bg-neutral-950 dark:shadow-[0_24px_70px_rgba(0,0,0,0.35)] sm:p-8">
+            <div className="space-y-5 text-base leading-8 text-neutral-600 dark:text-neutral-300 sm:text-lg">
+              <p>
+                Our goal is to help people grow closer to God through
+                consistent prayer, scripture, memorization, journaling,
+                reflection, and spiritual routines.
+              </p>
+              <p className="font-semibold text-neutral-950 dark:text-neutral-50">
+                That is why the core of Steadfast remains available to
+                everyone.
+              </p>
+              <p>
+                Pro+ supports the future development of Steadfast while adding
+                sync, backup, multi-device access, and gift codes you can share
+                with others.
+              </p>
+              <blockquote className="border-l-2 border-orange-400 pl-5 font-semibold text-neutral-950 dark:text-neutral-50">
+                Lord, increase our borders.
+              </blockquote>
+              <p>
+                Whether you upgrade to Pro+ or choose to stay with the free
+                version, thank you for allowing us to come alongside you as you
+                grow in your walk with Jesus.
+              </p>
+            </div>
+            <div className="mt-8 text-sm font-semibold uppercase tracking-[0.18em] text-neutral-500 dark:text-neutral-400">
+              We&apos;re praying for you. Evan &amp; Jessica
+            </div>
           </div>
         </div>
       </div>
@@ -303,8 +416,10 @@ export default function SteadfastV2Page() {
         <Hero />
         <FeatureStories />
         <ConnectedPractice />
+        <SocialShareCreator />
         <DeviceShowcase />
         <SupportingFeatures />
+        <TeamMessage />
       </main>
       <DownloadFooter />
     </div>

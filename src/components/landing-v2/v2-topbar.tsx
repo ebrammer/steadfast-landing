@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
+import { APP_STORE_URL } from "@/components/landing-v2/app-store-link";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -63,11 +64,13 @@ export default function V2Topbar() {
           </a>
         </nav>
         <Button
-          type="button"
+          asChild
           size="sm"
           className="h-9 rounded-full bg-emerald-950 px-4 text-white shadow-none hover:bg-emerald-900 dark:bg-orange-400 dark:text-neutral-950 dark:hover:bg-orange-300"
         >
-          Download
+          <a href={APP_STORE_URL} target="_blank" rel="noreferrer">
+            Download
+          </a>
         </Button>
       </div>
     </header>

@@ -26,29 +26,29 @@ const platforms: Platform[] = [
   {
     name: "iPhone",
     Icon: DeviceMobile,
-    image: "/images/app-store/iphone-home.png",
+    image: "/images/website/iphone-home.png",
     alt: "Steadfast home dashboard on iPhone.",
-    width: 1242,
-    height: 2688,
-    imageClassName: "max-w-sm rounded-[32px]",
+    width: 1050,
+    height: 2283,
+    imageClassName: "max-w-sm rounded-[34px]",
   },
   {
     name: "iPad",
     Icon: DeviceTablet,
-    image: "/images/app-store/ipad-home.png",
+    image: "/images/website/ipad-home.png",
     alt: "Steadfast home dashboard on iPad.",
-    width: 2064,
-    height: 2752,
-    imageClassName: "max-w-2xl rounded-[24px]",
+    width: 1640,
+    height: 2360,
+    imageClassName: "max-w-2xl rounded-[30px]",
   },
   {
     name: "Connected",
     Icon: SquaresFour,
-    image: "/images/app-store/ipad-connections.png",
+    image: "/images/website/ipad-connections.png",
     alt: "Steadfast connections screen on iPad.",
-    width: 2064,
-    height: 2752,
-    imageClassName: "max-w-2xl rounded-[24px]",
+    width: 1640,
+    height: 2360,
+    imageClassName: "max-w-2xl rounded-[30px]",
   },
 ];
 
@@ -122,7 +122,7 @@ export default function DeviceShowcase() {
               width={selected.width}
               height={selected.height}
               className={cn(
-                "h-auto w-full object-contain shadow-[0_28px_65px_rgba(15,23,42,0.16)] dark:shadow-[0_28px_65px_rgba(0,0,0,0.45)]",
+                "h-auto w-full border border-white/90 object-contain shadow-[0_32px_80px_rgba(15,23,42,0.17)] dark:border-white/10 dark:shadow-[0_32px_80px_rgba(0,0,0,0.48)]",
                 selected.imageClassName,
               )}
               sizes="(min-width: 1024px) 72vw, 100vw"
