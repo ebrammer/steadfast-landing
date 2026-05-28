@@ -1,5 +1,17 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+### Supabase email confirmation (`/auth/callback`)
+
+Production URL: `https://www.steadfastfaith.app/auth/callback` — add that value **exactly** under [Supabase Dashboard](https://supabase.com/dashboard) → Authentication → URL configuration → **Redirect URLs**.
+
+This page does **not** call Supabase from the browser. Supabase verifies the email **before** redirecting here; this route only shows a confirmation message, surfaces `error` / `error_description` from the URL if something failed, and strips sensitive query/hash from the address bar.
+
+**QA checklist**
+
+1. Bare URL: open `/auth/callback`; expect the “email is confirmed” success copy (or tighten product rules if you need stricter detection).
+2. Error params: open `/auth/callback?error=access_denied&error_description=Test`; expect the error copy on the page.
+3. Real flow: use your confirmation email link; after Supabase verifies, you should land here with success copy (and optional “Open Steadfast app” deep link).
+
 ## Getting Started
 
 First, run the development server:
