@@ -16,6 +16,11 @@ const nextConfig: NextConfig = {
         destination: "/auth/callback",
         permanent: true,
       },
+      {
+        source: "/auth/recovery/",
+        destination: "/auth/recovery",
+        permanent: true,
+      },
     ];
   },
 };

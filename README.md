@@ -12,6 +12,18 @@ This page does **not** call Supabase from the browser. Supabase verifies the ema
 2. Error params: open `/auth/callback?error=access_denied&error_description=Test`; expect the error copy on the page.
 3. Real flow: use your confirmation email link; after Supabase verifies, you should land here with success copy (and optional “Open Steadfast app” deep link).
 
+### Supabase password recovery (`/auth/recovery`)
+
+Production URL: `https://www.steadfastfaith.app/auth/recovery` — allowlist under Supabase **Redirect URLs** alongside `steadfast://steadfastfaith.app/auth/recovery`.
+
+Supabase verifies the reset token **before** redirecting here. This route captures the PKCE `code` (or implicit tokens), deeplinks to `steadfast://steadfastfaith.app/auth/recovery` with the same query/hash so the native app can finish the exchange, then strips sensitive params from the address bar.
+
+**QA checklist**
+
+1. Bare URL: open `/auth/recovery`; expect expired/incomplete copy.
+2. Error params: open `/auth/recovery?error=access_denied&error_description=Test`; expect error copy.
+3. Handoff: open `/auth/recovery?code=test-code`; “Continue in Steadfast” should target `steadfast://steadfastfaith.app/auth/recovery?code=test-code`.
+
 ## Getting Started
 
 First, run the development server:
