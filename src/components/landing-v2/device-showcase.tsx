@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import {
-  Desktop,
+  SquaresFour,
   DeviceMobile,
   DeviceTablet,
   type Icon,
@@ -26,29 +26,29 @@ const platforms: Platform[] = [
   {
     name: "iPhone",
     Icon: DeviceMobile,
-    image: "https://placehold.co/900x1000/f7f7f7/525252.png?text=iPhone",
-    alt: "Steadfast on iPhone",
-    width: 900,
-    height: 1000,
-    imageClassName: "max-w-xl",
+    image: "/images/app-store/iphone-home.png",
+    alt: "Steadfast home dashboard on iPhone.",
+    width: 1242,
+    height: 2688,
+    imageClassName: "max-w-sm rounded-[32px]",
   },
   {
     name: "iPad",
     Icon: DeviceTablet,
-    image: "https://placehold.co/1200x820/f7f7f7/525252.png?text=iPad",
-    alt: "Steadfast on iPad",
-    width: 1200,
-    height: 820,
-    imageClassName: "max-w-5xl",
+    image: "/images/app-store/ipad-home.png",
+    alt: "Steadfast home dashboard on iPad.",
+    width: 2064,
+    height: 2752,
+    imageClassName: "max-w-2xl rounded-[24px]",
   },
   {
-    name: "Mac",
-    Icon: Desktop,
-    image: "https://placehold.co/1200x760/f7f7f7/525252.png?text=Mac",
-    alt: "Steadfast on Mac",
-    width: 1200,
-    height: 760,
-    imageClassName: "max-w-5xl",
+    name: "Connected",
+    Icon: SquaresFour,
+    image: "/images/app-store/ipad-connections.png",
+    alt: "Steadfast connections screen on iPad.",
+    width: 2064,
+    height: 2752,
+    imageClassName: "max-w-2xl rounded-[24px]",
   },
 ];
 
@@ -61,8 +61,12 @@ export default function DeviceShowcase() {
     <section className="bg-white pb-16 pt-8 dark:bg-neutral-950 sm:pb-24 sm:pt-10">
       <div className="mx-auto w-full max-w-7xl px-5 sm:px-8">
         <h2 className="text-center text-4xl font-semibold leading-tight text-neutral-800 dark:text-neutral-100 sm:text-5xl">
-          Steadfast on every device
+          Close at hand across your day
         </h2>
+        <p className="mx-auto mt-5 max-w-2xl text-center text-lg leading-8 text-neutral-600 dark:text-neutral-300">
+          Home keeps the next practice nearby, while the full library stays
+          ready when you need to browse, connect, or return later.
+        </p>
         <div
           className="mt-6 flex justify-center"
           role="tablist"
@@ -118,7 +122,7 @@ export default function DeviceShowcase() {
               width={selected.width}
               height={selected.height}
               className={cn(
-                "h-auto w-full object-contain drop-shadow-[0_28px_65px_rgba(15,23,42,0.16)] dark:drop-shadow-[0_28px_65px_rgba(0,0,0,0.45)]",
+                "h-auto w-full object-contain shadow-[0_28px_65px_rgba(15,23,42,0.16)] dark:shadow-[0_28px_65px_rgba(0,0,0,0.45)]",
                 selected.imageClassName,
               )}
               sizes="(min-width: 1024px) 72vw, 100vw"

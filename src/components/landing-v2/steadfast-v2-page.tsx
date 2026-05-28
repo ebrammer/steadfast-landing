@@ -8,58 +8,58 @@ import { Badge } from "@/components/ui/badge";
 const featureStories = [
   {
     eyebrow: "Prayer",
-    title: "Bring people and needs back into view.",
-    body: "Steadfast keeps prayer requests close to the people, lists, and routines they belong to, so prayer becomes a steady practice instead of a scattered note.",
-    image: "https://placehold.co/1100x820/f7f7f7/525252.png?text=Prayer",
-    alt: "Prayer feature placeholder",
+    title: "Remember the people and needs you carry.",
+    body: "Save prayers in plain words, connect them to people and lists, and return without turning prayer into a performance system.",
+    image: "/images/app-store/iphone-prayer.png",
+    alt: "Steadfast prayer detail screen with prayer history and notes.",
   },
   {
     eyebrow: "Scripture",
-    title: "Read, remember, and return to the Word.",
-    body: "Save passages, connect them to prayers and reflections, and practice memorization with deliberate repetition across the rhythms of ordinary life.",
-    image: "https://placehold.co/1100x820/f7f7f7/525252.png?text=Scripture",
-    alt: "Scripture feature placeholder",
+    title: "Keep passages close enough to return to.",
+    body: "Save Scripture for prayer, study, encouragement, or memorization, then connect it to the places it shaped your day.",
+    image: "/images/app-store/iphone-scripture.png",
+    alt: "Steadfast scripture passage screen with saved passage details.",
   },
   {
-    eyebrow: "Daily rhythm",
-    title: "A simple rule of life for each day.",
-    body: "Shape a devotional routine around Scripture, prayer, journaling, and reading plans without turning your quiet time into another productivity system.",
-    image: "https://placehold.co/1100x820/f7f7f7/525252.png?text=Daily+Rhythm",
-    alt: "Daily rhythm feature placeholder",
+    eyebrow: "Memorization",
+    title: "Practice Scripture gently over time.",
+    body: "Use short, repeatable tools for recall, review, and maintenance so familiar words stay near without pressure.",
+    image: "/images/app-store/iphone-memorization.png",
+    alt: "Steadfast memorization tools screen with practice options.",
   },
   {
-    eyebrow: "Personalization",
-    title: "Shape Steadfast around your spiritual disciplines.",
-    body: "Customize dashboards, choose the tools you use, and arrange the practices that matter most so Steadfast supports your approach to daily faithfulness.",
-    image: "https://placehold.co/1100x820/f7f7f7/525252.png?text=Personalization",
-    alt: "Personalization feature placeholder",
+    eyebrow: "Routines",
+    title: "Build rhythms small enough to repeat.",
+    body: "Bring prayers, passages, reading plans, people, and reflection into a repeatable flow for ordinary days.",
+    image: "/images/app-store/iphone-routine.png",
+    alt: "Steadfast routine screen with a list of routine items.",
   },
 ];
 
 const supportingFeatures = [
   {
-    title: "Linked journals",
-    body: "Connect reflections to the prayers and passages that gave them context.",
+    title: "Home for now",
+    body: "Keep the prayers, routines, readings, and quick actions you want close this week.",
+  },
+  {
+    title: "Library for everything",
+    body: "Browse the full record when you need older prayers, passages, entries, or plans.",
+  },
+  {
+    title: "Lists and people",
+    body: "Keep care personal by gathering prayers around names, families, teams, or seasons.",
+  },
+  {
+    title: "Journals and entries",
+    body: "Give reflection, notes, gratitude, and memories a place to return to.",
   },
   {
     title: "Reading plans",
-    body: "Follow structured Scripture plans or read freely without losing your place.",
+    body: "Keep coming back to Scripture without losing your place.",
   },
   {
-    title: "Memorization tools",
-    body: "Practice recall with varied exercises built for slow, repeated attention.",
-  },
-  {
-    title: "Focused sessions",
-    body: "Keep the day centered on the next faithful step, not a crowded dashboard.",
-  },
-  {
-    title: "People and lists",
-    body: "Organize prayer around the names and communities you are carrying.",
-  },
-  {
-    title: "Cross-device ready",
-    body: "Designed for the devices already close at hand throughout the day.",
+    title: "Reminders",
+    body: "Let important prayers and practices resurface at the right time.",
   },
 ];
 
@@ -67,9 +67,10 @@ function Hero() {
   return (
     <section
       id="v2-top"
-      className="relative overflow-hidden bg-white pb-8 pt-16 dark:bg-neutral-950 sm:pb-10 sm:pt-24"
+      className="relative overflow-hidden bg-white pb-12 pt-16 dark:bg-neutral-950 sm:pb-16 sm:pt-24"
     >
-      <div className="relative mx-auto grid w-full max-w-7xl gap-8 px-5 sm:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+      <div className="absolute inset-x-0 top-0 h-48 bg-[radial-gradient(circle_at_70%_20%,rgba(251,146,60,0.16),transparent_34%),radial-gradient(circle_at_88%_44%,rgba(20,184,166,0.13),transparent_28%)] dark:bg-[radial-gradient(circle_at_70%_20%,rgba(251,146,60,0.12),transparent_34%),radial-gradient(circle_at_88%_44%,rgba(45,212,191,0.10),transparent_28%)]" />
+      <div className="relative mx-auto grid w-full max-w-7xl gap-10 px-5 sm:px-8 lg:grid-cols-[0.88fr_1.12fr] lg:items-center">
         <div className="mx-auto max-w-2xl text-center lg:mx-0 lg:text-left">
           <Badge className="mb-7 border-orange-200 bg-orange-50 text-orange-700 dark:border-orange-400/30 dark:bg-orange-400/10 dark:text-orange-300">
             Now on the App Store
@@ -78,21 +79,49 @@ function Hero() {
             One place for daily Christian practice
           </h1>
           <p className="mt-7 text-lg leading-8 text-neutral-600 dark:text-neutral-300 sm:text-xl">
-            Steadfast gathers prayer, memorization, journaling, and
-            reading plans together for better daily faithfulness.
+            Steadfast gathers prayer, memorization, journaling, and reading
+            plans together for better daily faithfulness.
           </p>
           <div className="mt-9 flex justify-center lg:justify-start">
             <AppStoreBadge />
           </div>
         </div>
-        <div className="relative mx-auto w-full max-w-4xl">
+        <div className="relative mx-auto min-h-[520px] w-full max-w-4xl sm:min-h-[620px] lg:min-h-[680px]">
+          <div className="absolute left-1/2 top-1/2 h-[72%] w-[82%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-orange-100/60 blur-3xl dark:bg-orange-500/10" />
           <Image
-            src="/images/hero_image.png"
-            alt="Steadfast: Faith app screens"
-            width={1536}
-            height={1024}
-            className="relative h-auto w-full rounded-[24px] object-contain drop-shadow-[0_28px_60px_rgba(15,23,42,0.16)] dark:drop-shadow-[0_28px_60px_rgba(0,0,0,0.55)]"
-            sizes="(min-width: 1024px) 56vw, 100vw"
+            src="/images/app-store/ipad-home.png"
+            alt="Steadfast home dashboard on iPad."
+            width={2064}
+            height={2752}
+            className="absolute left-0 top-14 hidden h-auto w-[46%] -rotate-6 rounded-[22px] object-contain shadow-[0_28px_70px_rgba(15,23,42,0.16)] lg:block dark:shadow-[0_28px_70px_rgba(0,0,0,0.5)]"
+            sizes="(min-width: 1024px) 26vw, 0px"
+            priority
+          />
+          <Image
+            src="/images/app-store/iphone-scripture.png"
+            alt="Steadfast scripture passage screen on iPhone."
+            width={1242}
+            height={2688}
+            className="absolute right-[4%] top-8 h-auto w-[36%] rotate-6 rounded-[28px] object-contain shadow-[0_24px_65px_rgba(15,23,42,0.18)] sm:w-[30%] lg:right-[1%] lg:w-[26%] dark:shadow-[0_24px_65px_rgba(0,0,0,0.5)]"
+            sizes="(min-width: 1024px) 16vw, (min-width: 640px) 28vw, 36vw"
+            priority
+          />
+          <Image
+            src="/images/app-store/iphone-memorization.png"
+            alt="Steadfast memorization practice tools on iPhone."
+            width={1242}
+            height={2688}
+            className="absolute bottom-6 left-[2%] h-auto w-[36%] -rotate-3 rounded-[28px] object-contain shadow-[0_24px_65px_rgba(15,23,42,0.16)] sm:w-[30%] lg:left-[20%] lg:w-[25%] dark:shadow-[0_24px_65px_rgba(0,0,0,0.45)]"
+            sizes="(min-width: 1024px) 16vw, (min-width: 640px) 28vw, 36vw"
+            priority
+          />
+          <Image
+            src="/images/app-store/iphone-home.png"
+            alt="Steadfast home dashboard on iPhone."
+            width={1242}
+            height={2688}
+            className="absolute left-1/2 top-4 h-auto w-[46%] -translate-x-1/2 rounded-[32px] object-contain shadow-[0_32px_80px_rgba(15,23,42,0.22)] sm:w-[38%] lg:top-2 lg:w-[32%] dark:shadow-[0_32px_80px_rgba(0,0,0,0.58)]"
+            sizes="(min-width: 1024px) 20vw, (min-width: 640px) 34vw, 46vw"
             priority
           />
         </div>
@@ -143,10 +172,10 @@ function FeatureStories() {
                 <Image
                   src={feature.image}
                   alt={feature.alt}
-                  width={1200}
-                  height={900}
-                  className="mx-auto h-auto max-h-[560px] w-full object-contain drop-shadow-[0_20px_50px_rgba(15,23,42,0.10)] dark:drop-shadow-[0_20px_50px_rgba(0,0,0,0.35)]"
-                  sizes="(min-width: 1024px) 45vw, 100vw"
+                  width={1242}
+                  height={2688}
+                  className="mx-auto h-auto max-h-[720px] w-full max-w-[340px] rounded-[30px] object-contain shadow-[0_22px_60px_rgba(15,23,42,0.14)] dark:shadow-[0_22px_60px_rgba(0,0,0,0.45)]"
+                  sizes="(min-width: 1024px) 28vw, 86vw"
                 />
               </div>
             </article>
@@ -157,11 +186,42 @@ function FeatureStories() {
   );
 }
 
+function ConnectedPractice() {
+  return (
+    <section className="bg-neutral-50 py-20 dark:bg-neutral-900 sm:py-28">
+      <div className="mx-auto grid w-full max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+        <div className="mx-auto max-w-xl text-center lg:mx-0 lg:text-left">
+          <p className="text-sm font-semibold uppercase tracking-[0.24em] text-teal-800 dark:text-teal-300">
+            Connected practice
+          </p>
+          <h2 className="mt-4 text-4xl font-semibold leading-tight text-neutral-950 dark:text-neutral-50 sm:text-5xl">
+            Every practice can stay connected.
+          </h2>
+          <p className="mt-5 text-lg leading-8 text-neutral-600 dark:text-neutral-300">
+            A prayer can belong to a person. A passage can shape a routine. A
+            journal entry can preserve the story behind what changed.
+          </p>
+        </div>
+        <div className="flex justify-center">
+          <Image
+            src="/images/app-store/ipad-connections.png"
+            alt="Steadfast connections screen showing related people, scripture, and entries."
+            width={2064}
+            height={2752}
+            className="h-auto w-full max-w-3xl rounded-[24px] object-contain shadow-[0_28px_70px_rgba(15,23,42,0.14)] dark:shadow-[0_28px_70px_rgba(0,0,0,0.45)]"
+            sizes="(min-width: 1024px) 52vw, 100vw"
+          />
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function SupportingFeatures() {
   return (
     <section
       id="features"
-      className="bg-neutral-50 py-20 dark:bg-neutral-900 sm:py-28"
+      className="bg-white py-20 dark:bg-neutral-950 sm:py-28"
     >
       <div className="mx-auto w-full max-w-7xl px-5 sm:px-8">
         <div className="grid gap-10 lg:grid-cols-[0.75fr_1.25fr] lg:items-start">
@@ -177,7 +237,7 @@ function SupportingFeatures() {
             {supportingFeatures.map((feature) => (
               <article
                 key={feature.title}
-                className="rounded-[8px] border border-neutral-200 bg-white p-6 dark:border-neutral-800 dark:bg-neutral-950"
+                className="rounded-[8px] border border-neutral-200 bg-neutral-50 p-6 dark:border-neutral-800 dark:bg-neutral-900"
               >
                 <h3 className="text-lg font-semibold text-neutral-950 dark:text-neutral-50">
                   {feature.title}
@@ -207,11 +267,11 @@ function DownloadFooter() {
             className="h-14 w-14"
           />
           <h2 className="mt-8 max-w-3xl text-4xl font-semibold leading-tight sm:text-5xl">
-            Continue steadfastly in prayer, one ordinary day at a time.
+            Return to what matters, one ordinary day at a time.
           </h2>
           <p className="mt-5 max-w-2xl text-lg leading-8 text-neutral-300">
             Download Steadfast: Faith and begin a calmer daily rhythm of
-            Scripture, prayer, and reflection.
+            Scripture, prayer, memorization, and reflection.
           </p>
         </div>
         <div className="flex flex-col gap-5 lg:items-end">
@@ -242,6 +302,7 @@ export default function SteadfastV2Page() {
       <main>
         <Hero />
         <FeatureStories />
+        <ConnectedPractice />
         <DeviceShowcase />
         <SupportingFeatures />
       </main>
