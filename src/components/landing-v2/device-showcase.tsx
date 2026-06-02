@@ -106,7 +106,7 @@ export default function DeviceShowcase() {
           </div>
         </div>
         <div className="mt-8 flex justify-center">
-          <AppStoreBadge />
+          <AppStoreBadge placement="showcase" />
         </div>
 
         <div

@@ -1,16 +1,23 @@
 import Image from "next/image";
 
-import { APP_STORE_URL } from "@/components/landing-v2/app-store-link";
+import {
+  type AppStoreLinkPlacement,
+  getAppStoreUrl,
+} from "@/components/landing-v2/app-store-link";
 import { cn } from "@/lib/utils";
 
 type AppStoreBadgeProps = {
   className?: string;
+  placement: AppStoreLinkPlacement;
 };
 
-export default function AppStoreBadge({ className }: AppStoreBadgeProps) {
+export default function AppStoreBadge({
+  className,
+  placement,
+}: AppStoreBadgeProps) {
   return (
     <a
-      href={APP_STORE_URL}
+      href={getAppStoreUrl(placement)}
       target="_blank"
       rel="noreferrer"
       aria-label="Download Steadfast on the App Store"

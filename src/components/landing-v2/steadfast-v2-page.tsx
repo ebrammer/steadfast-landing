@@ -104,7 +104,7 @@ function Hero() {
             plans together for better daily faithfulness.
           </p>
           <div className="mt-9 flex justify-center lg:justify-start">
-            <AppStoreBadge />
+            <AppStoreBadge placement="hero" />
           </div>
         </div>
         <HeroImageCarousel />
@@ -388,7 +388,10 @@ function DownloadFooter() {
           </p>
         </div>
         <div className="flex flex-col gap-5 lg:items-end">
-          <AppStoreBadge className="border-neutral-200 bg-neutral-950 text-white hover:bg-neutral-900" />
+          <AppStoreBadge
+            placement="footer"
+            className="border-neutral-200 bg-neutral-950 text-white hover:bg-neutral-900"
+          />
           <div className="flex flex-wrap gap-5 text-sm text-neutral-300">
             <a className="hover:text-white" href="mailto:hello@steadfast.faith">
               Contact
