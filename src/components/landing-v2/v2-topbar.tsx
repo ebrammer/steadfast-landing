@@ -7,8 +7,13 @@ import { getAppStoreUrl } from "@/components/landing-v2/app-store-link";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
-export default function V2Topbar() {
+type V2TopbarProps = {
+  linkPrefix?: string;
+};
+
+export default function V2Topbar({ linkPrefix = "" }: V2TopbarProps) {
   const [isScrolled, setIsScrolled] = useState(false);
+  const href = (hash: string) => `${linkPrefix}${hash}`;
 
   useEffect(() => {
     const updateScrolled = () => setIsScrolled(window.scrollY > 4);
@@ -27,7 +32,7 @@ export default function V2Topbar() {
       )}
     >
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-5 py-4 sm:px-8">
-        <a href="#v2-top" className="flex min-w-0 items-center gap-3">
+        <a href={href("#v2-top")} className="flex min-w-0 items-center gap-3">
           <Image
             src="/images/faviconOrange.png"
             alt="Steadfast: Faith emblem"
@@ -46,19 +51,19 @@ export default function V2Topbar() {
         >
           <a
             className="transition hover:text-neutral-950 dark:hover:text-white"
-            href="#practice"
+            href={href("#practice")}
           >
             Practice
           </a>
           <a
             className="transition hover:text-neutral-950 dark:hover:text-white"
-            href="#features"
+            href={href("#features")}
           >
             Features
           </a>
           <a
             className="transition hover:text-neutral-950 dark:hover:text-white"
-            href="#download"
+            href={href("#download")}
           >
             Download
           </a>

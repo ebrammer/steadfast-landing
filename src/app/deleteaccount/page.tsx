@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-import FooterSection from "@/components/footer-section";
-import Topbar from "@/components/topbar";
+import V2DownloadFooter from "@/components/landing-v2/v2-download-footer";
+import V2Topbar from "@/components/landing-v2/v2-topbar";
 import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function DeleteAccountPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <Topbar />
+      <V2Topbar linkPrefix="/" />
       <main className="mx-auto flex w-full max-w-3xl flex-col gap-10 px-6 py-20 sm:px-8 lg:py-28">
         <section className="space-y-6">
           <p className="text-sm font-medium uppercase tracking-wider text-muted-foreground">
@@ -64,7 +64,7 @@ export default function DeleteAccountPage() {
           </Button>
         </div>
       </main>
-      <FooterSection />
+      <V2DownloadFooter />
     </div>
   );
 }
