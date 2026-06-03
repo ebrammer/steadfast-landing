@@ -9,8 +9,8 @@ export default function FooterSection() {
         <div className="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
           <div className="max-w-3xl space-y-5">
             <h2 className="text-3xl font-semibold leading-tight text-foreground sm:text-4xl">
-              "Continue steadfastly in prayer, being watchful in it with
-              thanksgiving."
+              &quot;Continue steadfastly in prayer, being watchful in it with
+              thanksgiving.&quot;
             </h2>
             <p className="text-lg text-muted-foreground">
               The Apostle Paul; to the church in Colossae
@@ -34,9 +34,16 @@ export default function FooterSection() {
             <a href="#">Contact</a>
           </Button>
           <Button asChild variant="link" className="px-0 text-muted-foreground">
-            <a href="/docs/Updated_Steadfast_Privacy_Policy.pdf" target="_blank" rel="noreferrer">
+            <a
+              href="/docs/Updated_Steadfast_Privacy_Policy.pdf"
+              target="_blank"
+              rel="noreferrer"
+            >
               Privacy Policy
             </a>
+          </Button>
+          <Button asChild variant="link" className="px-0 text-muted-foreground">
+            <a href="/deleteaccount">Delete Account</a>
           </Button>
         </div>
       </div>
