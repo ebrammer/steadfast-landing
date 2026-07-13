@@ -1,16 +1,35 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-### Supabase email confirmation (`/auth/callback`)
+### Supabase magic link / email callback (`/auth/callback`)
 
-Production URL: `https://www.steadfastfaith.app/auth/callback` — add that value **exactly** under [Supabase Dashboard](https://supabase.com/dashboard) → Authentication → URL configuration → **Redirect URLs**.
+Production URL: `https://www.steadfastfaith.app/auth/callback` — add that value **exactly** under [Supabase Dashboard](https://supabase.com/dashboard) → Authentication → URL configuration → **Redirect URLs**, alongside `steadfast://steadfastfaith.app/auth/callback`.
 
-This page does **not** call Supabase from the browser. Supabase verifies the email **before** redirecting here; this route only shows a confirmation message, surfaces `error` / `error_description` from the URL if something failed, and strips sensitive query/hash from the address bar.
+Supabase verifies the token **before** redirecting here. This route captures the PKCE `code` (or implicit tokens), deeplinks to `steadfast://steadfastfaith.app/auth/callback` with the same query/hash so the native app can finish the exchange, then strips sensitive params from the address bar.
 
 **QA checklist**
 
-1. Bare URL: open `/auth/callback`; expect the “email is confirmed” success copy (or tighten product rules if you need stricter detection).
-2. Error params: open `/auth/callback?error=access_denied&error_description=Test`; expect the error copy on the page.
-3. Real flow: use your confirmation email link; after Supabase verifies, you should land here with success copy (and optional “Open Steadfast app” deep link).
+1. Bare URL: open `/auth/callback`; expect expired/incomplete copy.
+2. Error params: open `/auth/callback?error=access_denied&error_description=Test`; expect error copy.
+3. Handoff: open `/auth/callback?code=test-code`; “Continue in Steadfast” should target `steadfast://steadfastfaith.app/auth/callback?code=test-code`.
+
+### Email campaign tracking
+
+Use `/email/[campaign]` links in outbound emails. The route records a Vercel Analytics custom event named `Email Link Click`, then redirects to the requested destination.
+
+Examples:
+
+```text
+https://steadfastfaith.app/email/launch-email
+https://steadfastfaith.app/email/launch-email?to=/docs&content=footer
+https://steadfastfaith.app/email/launch-email?to=app-store&content=primary-cta
+```
+
+Supported parameters:
+
+- `to`: same-site path to redirect to, or `app-store`; defaults to `/`.
+- `content`: optional placement label, such as `hero-cta`, `footer`, or `button-1`.
+
+Same-site redirects automatically receive `utm_source=email`, `utm_medium=email`, `utm_campaign=[campaign]`, and `utm_content=[content]` when provided. App Store redirects use the existing provider token and set Apple’s `ct` campaign token to `Email [campaign] [content]`.
 
 ### Supabase password recovery (`/auth/recovery`)
 

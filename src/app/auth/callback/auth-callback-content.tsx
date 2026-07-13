@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 type Phase = "loading" | "error" | "success";
 
@@ -24,41 +24,58 @@ function readOAuthErrorFromUrl(): {
   return { oauthError, oauthDescription };
 }
 
+function buildHandoffHref(search: string, hash: string): string {
+  return `${DEEP_LINK_BASE}${search}${hash}`;
+}
+
 export function AuthCallbackContent() {
   const [phase, setPhase] = useState<Phase>("loading");
   const [message, setMessage] = useState("");
-  const [fromEmailLink, setFromEmailLink] = useState(false);
+  const [handoffHref, setHandoffHref] = useState(DEEP_LINK_BASE);
+
+  const openAppLabel = useMemo(() => "Continue in Steadfast", []);
 
   useEffect(() => {
     const { oauthError, oauthDescription } = readOAuthErrorFromUrl();
+    const search = window.location.search;
+    const hash = window.location.hash;
+    const hadQueryOrHash = Boolean(search) || Boolean(hash);
 
     if (oauthError) {
       setPhase("error");
       setMessage(
         [oauthError, oauthDescription].filter(Boolean).join(" — ") ||
-          "Confirmation could not be completed.",
+          "Sign-in could not be completed.",
       );
       return;
     }
 
-    const hadQueryOrHash =
-      Boolean(window.location.search) || Boolean(window.location.hash);
-    setFromEmailLink(hadQueryOrHash);
-
-    // Supabase has already verified the email before redirecting here. Strip
-    // query/hash (may contain one-time codes or tokens) from the address bar.
-    const path = window.location.pathname;
-    if (hadQueryOrHash) {
-      window.history.replaceState({}, "", path);
+    if (!hadQueryOrHash) {
+      setPhase("error");
+      setMessage(
+        "This sign-in link is incomplete or expired. Request a new email link from the sign-in screen in the app.",
+      );
+      return;
     }
 
+    const href = buildHandoffHref(search, hash);
+    setHandoffHref(href);
+
+    // Strip one-time codes/tokens from the address bar after capturing handoff URL.
+    window.history.replaceState({}, "", window.location.pathname);
+
     setPhase("success");
+
+    // Best-effort auto-handoff on mobile browsers.
+    window.setTimeout(() => {
+      window.location.replace(href);
+    }, 300);
   }, []);
 
   return (
     <div className="mx-auto flex min-h-[70vh] max-w-md flex-col justify-center px-6 py-16">
       <h1 className="text-xl font-semibold tracking-tight text-foreground">
-        Steadfast
+        Continue in Steadfast
       </h1>
 
       <div className="mt-6 text-base leading-relaxed text-muted-foreground">
@@ -75,21 +92,19 @@ export function AuthCallbackContent() {
         {phase === "success" && (
           <div aria-live="polite">
             <p className="text-foreground">
-              {fromEmailLink
-                ? "Your email is confirmed. You can close this tab and continue in the Steadfast app."
-                : "This page is shown after you open the confirmation link from your Steadfast email. If you didn’t use that link, you can close this tab."}
+              Open the Steadfast Faith app to finish signing in.
             </p>
             <p className="mt-4">
               <a
-                href={DEEP_LINK_BASE}
+                href={handoffHref}
                 className="inline-flex h-11 items-center justify-center rounded-md border border-border bg-background px-4 text-sm font-medium text-foreground ring-offset-background transition-colors hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
               >
-                Open Steadfast app
+                {openAppLabel}
               </a>
             </p>
             <p className="mt-3 text-sm text-muted-foreground">
-              If nothing happens, open Steadfast manually—the button may not
-              work in desktop browsers.
+              If nothing happens, install or update the app, then tap the link
+              in your email again.
             </p>
           </div>
         )}

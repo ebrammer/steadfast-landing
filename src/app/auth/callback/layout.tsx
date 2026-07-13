@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Email confirmed · Steadfast",
-  description: "Email confirmation after your Steadfast link.",
+  title: "Continue in Steadfast",
+  description: "Complete sign-in in the Steadfast Faith app.",
   robots: { index: false, follow: false },
 };
 
