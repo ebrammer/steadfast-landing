@@ -1,13 +1,13 @@
 ---
 title: Steadfast Docs
-description: Help and reference for Steadfast: Faith.
+description: Help and reference for Steadfast products.
 ---
 
 # Steadfast Docs
 
-Welcome to the public help docs for Steadfast: Faith.
+Welcome to the public help docs for Steadfast products.
 
-## Start here
+## Steadfast: Faith
 
 - Download Steadfast: Faith from the App Store.
 - Use routines to group Scripture, prayer, journaling, and reading plans.
@@ -15,7 +15,9 @@ Welcome to the public help docs for Steadfast: Faith.
 
 ## Policies
 
-- [Privacy Policy](/docs/Updated_Steadfast_Privacy_Policy.pdf)
+- [Steadfast: Faith Privacy Policy](/docs/Updated_Steadfast_Privacy_Policy.pdf)
+- [Stuck Notes Privacy Policy](/docs/stuck-notes-privacy)
+- [Stuck Notes Privacy Policy (PDF)](/docs/Stuck_Notes_Privacy_Policy.pdf)
 
 ## Contact
 
