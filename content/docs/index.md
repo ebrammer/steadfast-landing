@@ -16,6 +16,10 @@ Welcome to the public help docs for Steadfast products.
 ## Policies
 
 - [Steadfast: Faith Privacy Policy](/docs/Updated_Steadfast_Privacy_Policy.pdf)
+- [Good Passage Privacy Policy](/docs/good-passage-privacy)
+- [Good Passage Privacy Policy (PDF)](/docs/Good_Passage_Privacy_Policy.pdf)
+- [Good Schedule Privacy Policy](/docs/good-schedule-privacy)
+- [Good Schedule Privacy Policy (PDF)](/docs/Good_Schedule_Privacy_Policy.pdf)
 - [Stuck Notes Privacy Policy](/docs/stuck-notes-privacy)
 - [Stuck Notes Privacy Policy (PDF)](/docs/Stuck_Notes_Privacy_Policy.pdf)
 
