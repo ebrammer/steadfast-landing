@@ -30,7 +30,7 @@ const platforms: Platform[] = [
     alt: "Steadfast home dashboard on iPhone.",
     width: 1050,
     height: 2283,
-    imageClassName: "max-w-sm rounded-[34px]",
+    imageClassName: "max-w-sm rounded-[34px] lg:max-w-[300px]",
   },
   {
     name: "iPad",
@@ -39,7 +39,7 @@ const platforms: Platform[] = [
     alt: "Steadfast home dashboard on iPad.",
     width: 1640,
     height: 2360,
-    imageClassName: "max-w-2xl rounded-[30px]",
+    imageClassName: "max-w-2xl rounded-[30px] lg:max-w-xl",
   },
   {
     name: "Connected",
@@ -48,7 +48,7 @@ const platforms: Platform[] = [
     alt: "Steadfast connections screen on iPad.",
     width: 1640,
     height: 2360,
-    imageClassName: "max-w-2xl rounded-[30px]",
+    imageClassName: "max-w-2xl rounded-[30px] lg:max-w-xl",
   },
 ];
 

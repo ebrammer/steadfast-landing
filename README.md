@@ -12,18 +12,6 @@ Supabase verifies the token **before** redirecting here. This route captures the
 2. Error params: open `/auth/callback?error=access_denied&error_description=Test`; expect error copy.
 3. Handoff: open `/auth/callback?code=test-code`; “Continue in Steadfast” should target `steadfast://steadfastfaith.app/auth/callback?code=test-code`.
 
-### Good Passage magic link callback (`/auth/good-passage/callback`)
-
-Production URL: `https://www.steadfastfaith.app/auth/good-passage/callback` — add that value **exactly** under Supabase Dashboard → Authentication → URL configuration → **Redirect URLs**, alongside `goodpassage://auth/callback`.
-
-Good Passage sends Supabase magic links to this web callback so email clients can open a normal HTTPS URL first. This route captures the PKCE `code` (or implicit tokens), deeplinks to `goodpassage://auth/callback` with the same query/hash so the native app can finish the exchange, then strips sensitive params from the address bar.
-
-**QA checklist**
-
-1. Bare URL: open `/auth/good-passage/callback`; expect expired/incomplete copy.
-2. Error params: open `/auth/good-passage/callback?error=access_denied&error_description=Test`; expect error copy.
-3. Handoff: open `/auth/good-passage/callback?code=test-code`; “Continue in Good Passage” should target `goodpassage://auth/callback?code=test-code`.
-
 ### Email campaign tracking
 
 Use `/email/[campaign]` links in outbound emails. The route records a Vercel Analytics custom event named `Email Link Click`, then redirects to the requested destination.

@@ -1,11 +1,20 @@
 import Image from "next/image";
+import {
+  Bell,
+  BookBookmark,
+  CalendarCheck,
+  Compass,
+  Fire,
+} from "@phosphor-icons/react/dist/ssr";
+import type { Icon } from "@phosphor-icons/react/dist/lib/types";
 
-import AppStoreBadge from "@/components/landing-v2/app-store-badge";
 import DeviceShowcase from "@/components/landing-v2/device-showcase";
+import { getAppStoreUrl } from "@/components/landing-v2/app-store-link";
 import HeroImageCarousel from "@/components/landing-v2/hero-image-carousel";
 import V2DownloadFooter from "@/components/landing-v2/v2-download-footer";
 import V2Topbar from "@/components/landing-v2/v2-topbar";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 
 const featureStories = [
   {
@@ -85,30 +94,187 @@ const supportingFeatures = [
   },
 ];
 
+const practiceCards: Array<{
+  title: string;
+  body: string;
+  Icon?: Icon;
+  iconAsset?: string;
+}> = [
+  {
+    title: "Prayer",
+    body: "Create prayers, track updates, and mark answered prayers.",
+    Icon: Fire,
+  },
+  {
+    title: "Scripture",
+    body: "Save passages, organize them, and open them later.",
+    iconAsset: "/images/website/bible-regular.svg",
+  },
+  {
+    title: "Memorize",
+    body: "Practice saved Scripture with memorization tools.",
+    iconAsset: "/images/website/bible-regular.svg",
+  },
+  {
+    title: "Reading Plans",
+    body: "Create plans and track reading progress.",
+    Icon: Compass,
+  },
+  {
+    title: "Journals",
+    body: "Write entries and organize them in journals.",
+    Icon: BookBookmark,
+  },
+  {
+    title: "Routines",
+    body: "Group practices into a repeatable routine.",
+    Icon: CalendarCheck,
+  },
+  {
+    title: "Reminders",
+    body: "Set reminders for prayers, Scripture, routines, and more.",
+    Icon: Bell,
+  },
+];
+
 function Hero() {
   return (
     <section
       id="v2-top"
       className="relative overflow-hidden bg-white pb-12 pt-16 dark:bg-neutral-950 sm:pb-16 sm:pt-24"
     >
-      <div className="absolute inset-x-0 top-0 h-48 bg-[radial-gradient(circle_at_70%_20%,rgba(251,146,60,0.16),transparent_34%),radial-gradient(circle_at_88%_44%,rgba(20,184,166,0.13),transparent_28%)] dark:bg-[radial-gradient(circle_at_70%_20%,rgba(251,146,60,0.12),transparent_34%),radial-gradient(circle_at_88%_44%,rgba(45,212,191,0.10),transparent_28%)]" />
       <div className="relative mx-auto grid w-full max-w-7xl gap-10 px-5 sm:px-8 lg:grid-cols-[0.88fr_1.12fr] lg:items-center">
         <div className="mx-auto max-w-2xl text-center lg:mx-0 lg:text-left">
           <Badge className="mb-7 border-orange-200 bg-orange-50 text-orange-700 dark:border-orange-400/30 dark:bg-orange-400/10 dark:text-orange-300">
             Now on the App Store
           </Badge>
-          <h1 className="text-5xl font-semibold leading-[1.02] text-neutral-950 dark:text-neutral-50 sm:text-6xl lg:text-7xl">
-            One place for daily Christian practice
+          <h1 className="text-4xl font-semibold leading-[1.05] text-neutral-950 dark:text-neutral-50 sm:text-5xl lg:text-6xl">
+            Grow in Christ One Ordinary Day at a Time
           </h1>
-          <p className="mt-7 text-lg leading-8 text-neutral-600 dark:text-neutral-300 sm:text-xl">
-            Steadfast gathers prayer, memorization, journaling, and reading
-            plans together for better daily faithfulness.
+          <p className="mt-7 text-base leading-7 text-neutral-600 dark:text-neutral-300 sm:text-lg">
+            You already know what matters. You want to pray more faithfully,
+            spend time in Scripture, and remember what God is teaching you.
+            Steadfast helps you return to it each day.
           </p>
           <div className="mt-9 flex justify-center lg:justify-start">
-            <AppStoreBadge placement="hero" />
+            <Button
+              asChild
+              size="lg"
+              className="bg-orange-600 px-7 text-white shadow-lg shadow-orange-600/20 hover:bg-orange-700 dark:bg-orange-500 dark:text-neutral-950 dark:hover:bg-orange-400"
+            >
+              <a
+                href={getAppStoreUrl("hero")}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Start Free
+              </a>
+            </Button>
           </div>
         </div>
         <HeroImageCarousel />
+      </div>
+    </section>
+  );
+}
+
+function PracticeQuote() {
+  return (
+    <section className="bg-neutral-50 py-16 dark:bg-neutral-900 sm:py-20">
+      <div className="mx-auto w-full max-w-5xl px-5 text-center sm:px-8">
+        <blockquote className="mx-auto max-w-3xl border-y border-orange-200/80 py-10 text-2xl font-semibold leading-snug text-neutral-950 dark:border-orange-300/20 dark:text-neutral-50 sm:text-3xl">
+          Our mission is to help Christians practice the habits that nurture a
+          steadfast faith - through prayer, Scripture, memorization, journaling,
+          and reflection.
+        </blockquote>
+      </div>
+    </section>
+  );
+}
+
+function MissionSection() {
+  return (
+    <section className="bg-white py-20 dark:bg-neutral-950 sm:py-28">
+      <div className="mx-auto w-full max-w-4xl px-5 sm:px-8">
+        <div>
+          <p className="text-sm font-semibold uppercase tracking-[0.24em] text-orange-700 dark:text-orange-300">
+            Mission
+          </p>
+          <h2 className="mt-4 max-w-3xl text-4xl font-semibold leading-tight text-neutral-950 dark:text-neutral-50 sm:text-5xl">
+            Why We Built Steadfast Faith
+          </h2>
+        </div>
+        <div className="mt-10 max-w-3xl space-y-6 text-base leading-8 text-neutral-600 dark:text-neutral-300 sm:text-lg">
+          <p>
+            Growing in Christ rarely happens through dramatic moments. More
+            often, it happens through ordinary days.
+          </p>
+          <p>
+            We built Steadfast Faith to support those ordinary practices
+            because we believe God often uses ordinary means to produce lasting
+            growth.
+          </p>
+          <ul className="list-disc space-y-2 pl-6 text-neutral-600 dark:text-neutral-300">
+            <li>A prayer offered before work.</li>
+            <li>A passage read before bed.</li>
+            <li>A verse memorized over several weeks.</li>
+            <li>
+              A reminder of God&apos;s faithfulness during a difficult season.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function PracticeRail() {
+  return (
+    <section className="bg-neutral-50 py-20 dark:bg-neutral-900 sm:py-24">
+      <div className="mx-auto w-full max-w-7xl px-5 sm:px-8">
+        <div className="max-w-3xl">
+          <p className="text-sm font-semibold uppercase tracking-[0.24em] text-orange-700 dark:text-orange-300">
+            What you can practice
+          </p>
+          <h2 className="mt-4 text-4xl font-semibold leading-tight text-neutral-950 dark:text-neutral-50 sm:text-5xl">
+            Simple tools for ordinary faithfulness.
+          </h2>
+        </div>
+        <div className="scrollbar-none mt-10 w-screen overflow-x-auto pb-3">
+          <div className="flex w-max gap-4 pr-5 sm:pr-8">
+            {practiceCards.map(({ title, body, Icon, iconAsset }) => (
+              <article
+                key={title}
+                className="w-[260px] shrink-0 rounded-[8px] border border-neutral-200 bg-white p-6 dark:border-neutral-800 dark:bg-neutral-950 sm:w-[280px]"
+              >
+                <div className="flex h-11 w-11 items-center justify-center rounded-[8px] bg-orange-50 text-orange-700 dark:bg-orange-400/10 dark:text-orange-300">
+                  {Icon ? (
+                    <Icon
+                      aria-hidden="true"
+                      className="size-6"
+                      weight="regular"
+                    />
+                  ) : (
+                    <span
+                      aria-hidden="true"
+                      className="size-6 bg-current"
+                      style={{
+                        WebkitMask: `url(${iconAsset}) center / contain no-repeat`,
+                        mask: `url(${iconAsset}) center / contain no-repeat`,
+                      }}
+                    />
+                  )}
+                </div>
+                <h3 className="mt-5 text-lg font-semibold text-neutral-950 dark:text-neutral-50">
+                  {title}
+                </h3>
+                <p className="mt-3 text-sm leading-6 text-neutral-600 dark:text-neutral-300">
+                  {body}
+                </p>
+              </article>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );
@@ -169,8 +335,8 @@ function FeatureStories() {
                   alt={feature.alt}
                   width={1050}
                   height={2283}
-                  className="mx-auto h-auto max-h-[720px] w-full max-w-[340px] rounded-[34px] border border-white/90 object-contain shadow-[0_28px_76px_rgba(15,23,42,0.16)] dark:border-white/10 dark:shadow-[0_28px_76px_rgba(0,0,0,0.5)]"
-                  sizes="(min-width: 1024px) 28vw, 86vw"
+                  className="mx-auto h-auto max-h-[720px] w-full max-w-[340px] rounded-[34px] border border-white/90 object-contain shadow-[0_28px_76px_rgba(15,23,42,0.16)] lg:max-w-[300px] dark:border-white/10 dark:shadow-[0_28px_76px_rgba(0,0,0,0.5)]"
+                  sizes="(min-width: 1024px) 24vw, 86vw"
                 />
               </div>
             </article>
@@ -203,8 +369,8 @@ function ConnectedPractice() {
             alt="Steadfast connections screen showing related people, scripture, and entries."
             width={1640}
             height={2360}
-            className="h-auto w-full max-w-3xl rounded-[30px] border border-white/90 object-contain shadow-[0_32px_84px_rgba(15,23,42,0.16)] dark:border-white/10 dark:shadow-[0_32px_84px_rgba(0,0,0,0.48)]"
-            sizes="(min-width: 1024px) 52vw, 100vw"
+            className="h-auto w-full max-w-3xl rounded-[30px] border border-white/90 object-contain shadow-[0_32px_84px_rgba(15,23,42,0.16)] lg:max-w-2xl dark:border-white/10 dark:shadow-[0_32px_84px_rgba(0,0,0,0.48)]"
+            sizes="(min-width: 1024px) 44vw, 100vw"
           />
         </div>
       </div>
@@ -224,29 +390,28 @@ function SocialShareCreator() {
     <section className="overflow-hidden bg-white py-20 dark:bg-neutral-950 sm:py-28">
       <div className="mx-auto grid w-full max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
         <div className="relative mx-auto w-full max-w-4xl lg:order-1">
-          <div className="absolute left-1/2 top-1/2 h-[70%] w-[82%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-rose-100/70 blur-3xl dark:bg-rose-400/10" />
           <div className="relative grid items-end gap-5 sm:grid-cols-2">
-            <figure className="mx-auto w-full max-w-[300px] sm:max-w-[330px]">
+            <figure className="mx-auto w-full max-w-[300px] sm:max-w-[330px] lg:max-w-[280px]">
               <Image
                 src="/images/website/social-share-story.png"
                 alt="Steadfast social share creator editing a story image."
                 width={1050}
                 height={2283}
                 className="h-auto w-full rounded-[34px] border border-white/90 object-contain shadow-[0_32px_82px_rgba(15,23,42,0.18)] dark:border-white/10 dark:shadow-[0_32px_82px_rgba(0,0,0,0.54)]"
-                sizes="(min-width: 1024px) 24vw, (min-width: 640px) 42vw, 74vw"
+                sizes="(min-width: 1024px) 22vw, (min-width: 640px) 42vw, 74vw"
               />
               <figcaption className="mt-4 text-center text-xs font-semibold uppercase tracking-[0.18em] text-neutral-500 dark:text-neutral-400">
                 Story format
               </figcaption>
             </figure>
-            <figure className="mx-auto hidden w-full max-w-[360px] sm:block">
+            <figure className="mx-auto hidden w-full max-w-[360px] sm:block lg:max-w-[320px]">
               <Image
                 src="/images/website/social-share-post.png"
                 alt="Steadfast social share creator preparing a post image."
                 width={1640}
                 height={2360}
                 className="h-auto w-full rounded-[30px] border border-white/90 object-contain shadow-[0_32px_82px_rgba(15,23,42,0.16)] dark:border-white/10 dark:shadow-[0_32px_82px_rgba(0,0,0,0.5)]"
-                sizes="(min-width: 1024px) 28vw, (min-width: 640px) 44vw, 0px"
+                sizes="(min-width: 1024px) 24vw, (min-width: 640px) 44vw, 0px"
               />
               <figcaption className="mt-4 text-center text-xs font-semibold uppercase tracking-[0.18em] text-neutral-500 dark:text-neutral-400">
                 Post format
@@ -320,66 +485,20 @@ function SupportingFeatures() {
   );
 }
 
-function TeamMessage() {
-  return (
-    <section className="bg-neutral-50 py-20 dark:bg-neutral-900 sm:py-28">
-      <div className="mx-auto w-full max-w-7xl px-5 sm:px-8">
-        <div className="grid gap-10 lg:grid-cols-[0.72fr_1.28fr] lg:items-start">
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.24em] text-orange-700 dark:text-orange-300">
-              A message from the team
-            </p>
-            <h2 className="mt-4 text-4xl font-semibold leading-tight text-neutral-950 dark:text-neutral-50 sm:text-5xl">
-              The mission comes first.
-            </h2>
-          </div>
-          <div className="rounded-[16px] border border-orange-200/70 bg-white p-6 shadow-[0_24px_70px_rgba(15,23,42,0.08)] dark:border-orange-300/15 dark:bg-neutral-950 dark:shadow-[0_24px_70px_rgba(0,0,0,0.35)] sm:p-8">
-            <div className="space-y-5 text-base leading-8 text-neutral-600 dark:text-neutral-300 sm:text-lg">
-              <p>
-                Our goal is to help people grow closer to God through
-                consistent prayer, scripture, memorization, journaling,
-                reflection, and spiritual routines.
-              </p>
-              <p className="font-semibold text-neutral-950 dark:text-neutral-50">
-                That is why the core of Steadfast remains available to
-                everyone.
-              </p>
-              <p>
-                Pro+ supports the future development of Steadfast while adding
-                sync, backup, multi-device access, and gift codes you can share
-                with others.
-              </p>
-              <blockquote className="border-l-2 border-orange-400 pl-5 font-semibold text-neutral-950 dark:text-neutral-50">
-                Lord, increase our borders.
-              </blockquote>
-              <p>
-                Whether you upgrade to Pro+ or choose to stay with the free
-                version, thank you for allowing us to come alongside you as you
-                grow in your walk with Jesus.
-              </p>
-            </div>
-            <div className="mt-8 text-sm font-semibold uppercase tracking-[0.18em] text-neutral-500 dark:text-neutral-400">
-              We&apos;re praying for you. Evan &amp; Jessica
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
 export default function SteadfastV2Page() {
   return (
     <div className="min-h-screen bg-white text-neutral-950 dark:bg-neutral-950 dark:text-neutral-100">
       <V2Topbar />
       <main>
         <Hero />
+        <PracticeQuote />
+        <MissionSection />
+        <PracticeRail />
         <FeatureStories />
         <ConnectedPractice />
         <SocialShareCreator />
         <DeviceShowcase />
         <SupportingFeatures />
-        <TeamMessage />
       </main>
       <V2DownloadFooter />
     </div>

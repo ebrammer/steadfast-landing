@@ -38,8 +38,7 @@ export default function HeroImageCarousel() {
   const selected = heroImages[selectedIndex];
 
   return (
-    <div className="relative mx-auto flex min-h-[560px] w-full max-w-3xl items-center justify-center sm:min-h-[660px] lg:min-h-[720px]">
-      <div className="absolute left-1/2 top-1/2 h-[72%] w-[58%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-teal-100/70 blur-3xl dark:bg-teal-400/10" />
+    <div className="relative mx-auto flex min-h-[560px] w-full max-w-3xl items-center justify-center sm:min-h-[660px] lg:min-h-[620px]">
       <div className="relative z-10 flex flex-col items-center gap-5">
         <Image
           key={selected.src}
@@ -47,8 +46,8 @@ export default function HeroImageCarousel() {
           alt={selected.alt}
           width={1050}
           height={2283}
-          className="h-auto w-[62vw] max-w-[360px] rounded-[40px] border border-white/90 object-contain shadow-[0_38px_96px_rgba(15,23,42,0.24)] transition duration-500 sm:w-[42vw] lg:w-[27vw] dark:border-white/10 dark:shadow-[0_38px_96px_rgba(0,0,0,0.62)]"
-          sizes="(min-width: 1024px) 27vw, (min-width: 640px) 42vw, 62vw"
+          className="h-auto w-[62vw] max-w-[360px] rounded-[40px] border border-white/90 object-contain shadow-[0_38px_96px_rgba(15,23,42,0.24)] transition duration-500 sm:w-[42vw] lg:w-[22vw] lg:max-w-[300px] dark:border-white/10 dark:shadow-[0_38px_96px_rgba(0,0,0,0.62)]"
+          sizes="(min-width: 1024px) 22vw, (min-width: 640px) 42vw, 62vw"
           priority
         />
         <div className="flex items-center gap-2" aria-label="Hero image slides">

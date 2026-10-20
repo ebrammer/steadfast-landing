@@ -1,0 +1,34 @@
+{
+	"folders": [
+		{
+			"path": "../steadfast-faith"
+		},
+		{
+			"path": "../steadfast-admin"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"dart.enableSdkFormatter": true,
+		"dart.previewFlutterUiGuides": false,
+		"dart.previewFlutterUiGuidesCustomTracking": false,
+		"dart.showTodos": false,
+		"files.associations": {
+			"*.dart": "dart"
+		},
+		"git.confirmSync": false,
+		"terminal.integrated.defaultProfile.osx": "zsh",
+		"terminal.integrated.fontSize": 12,
+		"dart.debugExternalPackageLibraries": false,
+		"dart.debugSdkLibraries": false,
+		"dart.maxLogLineLength": 2000,
+		"dart.enableSnippets": false,
+		"dart.closingLabels": false,
+		"editor.tokenColorCustomizations": {
+			"comments": "",
+			"textMateRules": []
+		}
+	}
+}

@@ -45,29 +45,6 @@ export default function V2Topbar({ linkPrefix = "" }: V2TopbarProps) {
             Steadfast: Faith
           </span>
         </a>
-        <nav
-          aria-label="Landing navigation"
-          className="hidden items-center gap-6 text-sm font-medium text-neutral-600 md:flex dark:text-neutral-400"
-        >
-          <a
-            className="transition hover:text-neutral-950 dark:hover:text-white"
-            href={href("#practice")}
-          >
-            Practice
-          </a>
-          <a
-            className="transition hover:text-neutral-950 dark:hover:text-white"
-            href={href("#features")}
-          >
-            Features
-          </a>
-          <a
-            className="transition hover:text-neutral-950 dark:hover:text-white"
-            href={href("#download")}
-          >
-            Download
-          </a>
-        </nav>
         <Button
           asChild
           size="sm"

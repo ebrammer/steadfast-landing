@@ -12,15 +12,26 @@ const APP_STORE_CAMPAIGN_TOKENS: Record<AppStoreLinkPlacement, string> = {
 const APP_STORE_PROVIDER_TOKEN =
   process.env.NEXT_PUBLIC_APP_STORE_PROVIDER_TOKEN ?? "126890899";
 
-export function getAppStoreUrl(placement: AppStoreLinkPlacement) {
-  const url = new URL(APP_STORE_URL);
-
+function applyAppStoreCampaignParams(url: URL, campaignToken: string) {
   if (APP_STORE_PROVIDER_TOKEN) {
     url.searchParams.set("pt", APP_STORE_PROVIDER_TOKEN);
   }
 
-  url.searchParams.set("ct", APP_STORE_CAMPAIGN_TOKENS[placement]);
+  url.searchParams.set("ct", campaignToken);
   url.searchParams.set("mt", "8");
 
   return url.toString();
+}
+
+export function getAppStoreUrl(placement: AppStoreLinkPlacement) {
+  const url = new URL(APP_STORE_URL);
+
+  return applyAppStoreCampaignParams(url, APP_STORE_CAMPAIGN_TOKENS[placement]);
+}
+
+export function getEmailAppStoreUrl(campaign: string, content?: string) {
+  const url = new URL(APP_STORE_URL);
+  const campaignToken = ["Email", campaign, content].filter(Boolean).join(" ");
+
+  return applyAppStoreCampaignParams(url, campaignToken);
 }
